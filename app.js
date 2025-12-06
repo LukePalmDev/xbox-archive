@@ -18,7 +18,13 @@ function getRouteFromHash() {
 function setActiveNav(route) {
   const navLinks = document.querySelectorAll('.nav-links a[data-route]');
   navLinks.forEach((link) => {
-    link.classList.toggle('active', link.dataset.route === route);
+    if (link.dataset.route === route) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
