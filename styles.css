@@ -58,7 +58,8 @@ a {
 }
 
 a:focus-visible,
-.button:focus-visible {
+.button:focus-visible,
+.nav-trigger:focus-visible {
   outline: 2px solid var(--xbox-yellow);
   outline-offset: 3px;
 }
@@ -71,6 +72,10 @@ a:focus-visible,
 
 main {
   flex: 1;
+}
+
+.app-main {
+  min-height: 60vh;
 }
 
 .container {
@@ -90,7 +95,9 @@ main {
 .navbar .inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
   padding: 1rem 0;
 }
 
@@ -125,19 +132,59 @@ main {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
 
-.nav-links a {
+.wiki-group {
   position: relative;
+}
+
+.nav-links a,
+.nav-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
   color: var(--color-muted);
   transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-.nav-links a::after {
+.nav-trigger {
+  list-style: none;
+}
+
+.nav-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.nav-trigger::before {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  margin-right: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.wiki-group[open] .nav-trigger::before {
+  transform: rotate(225deg) translateY(-1px);
+}
+
+.nav-links a::after,
+.nav-trigger::after {
   content: "";
   position: absolute;
   left: 0;
@@ -159,14 +206,59 @@ main {
 
 .nav-links a:hover,
 .nav-links a:focus,
-.nav-links a.active {
+.nav-links a.active,
+.nav-trigger:hover,
+.nav-trigger:focus,
+.nav-trigger.active,
+.wiki-group[open] .nav-trigger {
   color: var(--color-text);
 }
 
 .nav-links a:hover::after,
 .nav-links a:focus::after,
-.nav-links a.active::after {
+.nav-links a.active::after,
+.nav-trigger:hover::after,
+.nav-trigger:focus::after,
+.nav-trigger.active::after,
+.wiki-group[open] .nav-trigger::after {
   transform: scaleX(1);
+}
+
+.wiki-menu {
+  position: absolute;
+  top: calc(100% + 0.85rem);
+  left: 0;
+  z-index: 150;
+  min-width: 12rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.95rem;
+  background: rgba(8, 11, 15, 0.96);
+  border: 1px solid rgba(0, 99, 177, 0.45);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.42);
+}
+
+.wiki-group:not([open]) .wiki-menu {
+  display: none;
+}
+
+.wiki-menu a {
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.65rem;
+  font-size: 0.79rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+}
+
+.wiki-menu a::after {
+  display: none;
+}
+
+.wiki-menu a:hover,
+.wiki-menu a:focus,
+.wiki-menu a.active {
+  background: rgba(0, 99, 177, 0.24);
 }
 
 .hero {
@@ -342,6 +434,13 @@ main {
   color: var(--color-muted);
 }
 
+.meta-line {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.03em;
+  margin-top: auto;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -501,6 +600,44 @@ main {
   color: var(--color-muted);
 }
 
+.table-wrap {
+  border: 1px solid rgba(0, 99, 177, 0.3);
+  border-radius: 1rem;
+  overflow-x: auto;
+  background: rgba(10, 15, 21, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.feature-table th,
+.feature-table td {
+  text-align: left;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-table th {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cde6ff;
+  background: rgba(0, 99, 177, 0.2);
+}
+
+.feature-table td {
+  color: var(--color-muted);
+}
+
+.feature-table tr:last-child td {
+  border-bottom: 0;
+}
+
 .footer {
   padding: 3rem 0;
   border-top: 1px solid rgba(0, 99, 177, 0.28);
@@ -519,6 +656,7 @@ main {
 .footer-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -531,9 +669,19 @@ main {
 }
 
 @media (max-width: 640px) {
+  .navbar .inner {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .nav-links {
     gap: 1rem;
     font-size: 0.8rem;
+  }
+
+  .wiki-menu {
+    position: static;
+    margin-top: 0.6rem;
   }
 
   .hero {
@@ -542,5 +690,9 @@ main {
 
   .model-highlight {
     grid-template-columns: 1fr;
+  }
+
+  .callout {
+    padding: 2rem;
   }
 }

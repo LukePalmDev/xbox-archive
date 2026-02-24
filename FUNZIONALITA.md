@@ -1,53 +1,114 @@
-# Funzionalita attuali del sito (stato: 2026-02-23)
+# Funzionalita attuali del sito (stato: 2026-02-24)
 
 ## Panoramica
-- Sito statico multipagina in italiano dedicato alla storia delle console Xbox.
-- Pagine disponibili: `index.html`, `xbox-original.html`, `xbox-360.html`, `xbox-one.html`, `xbox-series.html`.
+- Sito migrato da multipagina statico a **single-page app (SPA)**.
+- Unico entrypoint HTML: `index.html`.
+- Rendering dinamico contenuti tramite `app.js`.
+- Stile centralizzato al 100% in `styles.css`.
 
-## Funzionalita globali
-- Navigazione principale persistente con link a tutte le pagine.
-- Evidenziazione della pagina attiva in navbar (`aria-current="page"`).
-- Navbar sticky in alto durante lo scroll.
-- Navigazione interna a sezioni tramite anchor (`#...`) in hero/footer.
-- Footer con link rapidi e contatto email (`mailto:ciao@projectbox.it`).
-- Link esterno a `xbox.com` in nuova scheda (solo pagina Xbox Original).
-- Layout responsive con breakpoint mobile a `640px`.
-- UI coerente a card: hero, timeline, griglie di contenuti, liste specifiche tecniche.
-- Smooth scroll nativo via CSS (`scroll-behavior: smooth`).
+## Architettura tecnica
+- **Presentazione**: shell HTML minimale (`index.html`) con header, main dinamico e footer.
+- **Routing client-side**: hash routing (`#/...`) gestito in JavaScript.
+- **Contenuti**: dataset interni in `app.js` (Wiki, Blog, Forum, Contributi).
+- **Stile**: unico foglio globale `styles.css` con tema Xbox ABXY + tipografia Segoe.
+- **Nessuna dipendenza framework**: soluzione vanilla HTML/CSS/JS.
 
-## Contenuti/funzionalita per pagina
-### Home (`index.html`)
-- Hero introduttiva con CTA verso generazioni e missione del progetto.
-- Sezione missione con 3 card (Ricerca curata, Esperienza guidata, Community first).
-- Timeline sintetica delle 4 generazioni.
-- Catalogo rapido con link diretti alle pagine generazionali.
+## Navigazione principale
+Menu in alto a sinistra con:
+- `Home`
+- `Wiki` (dropdown)
+  - `Xbox`
+  - `Xbox 360`
+  - `Xbox One`
+  - `Xbox Serie`
+- `Blog`
+- `Forum`
+- `Contributi`
 
-### Xbox Original (`xbox-original.html`)
-- Timeline delle tappe principali (2001-2005).
-- Sezione "Sotto-modelli" con 4 card tecniche (Launch, Controller S, 1.6, Crystal).
+Comportamenti:
+- Stato attivo automatico in base alla route.
+- Dropdown Wiki con chiusura su click esterno, selezione voce ed `Escape`.
+- Scroll top automatico ad ogni cambio sezione.
 
-### Xbox 360 (`xbox-360.html`)
-- Timeline evolutiva (Core/Premium -> Elite/Jasper -> S -> E).
-- Sezione modelli con 6 card (incluse edizioni speciali).
-- Sezione servizi dedicata (Live Gold, Marketplace, Kinect).
+## Rotte disponibili
+- `#/home`
+- `#/wiki/xbox`
+- `#/wiki/xbox-360`
+- `#/wiki/xbox-one`
+- `#/wiki/xbox-series`
+- `#/blog`
+- `#/forum`
+- `#/contributi`
 
-### Xbox One (`xbox-one.html`)
-- Timeline del ciclo generazionale (lancio, revisione UI, One S, One X).
-- Sezione modelli con 4 card (One, One S, One X, edizioni limitate).
-- Sezione ecosistema (Game Pass, retrocompatibilita, Elite Controller).
+Fallback:
+- Route invalida -> redirect automatico a `#/home`.
 
-### Xbox Series (`xbox-series.html`)
-- Timeline (Project Scarlett, lancio, FPS Boost, Cloud & Game Pass).
-- Confronto strutturato tra Series X e Series S (specifiche e target).
-- Sezione feature next-gen (Velocity Architecture, Quick Resume, Cloud Gaming).
+## Sezioni e funzionalita
 
-## Stato tecnico attuale
-- Nessun framework/build: il sito funziona come puro HTML/CSS statico.
-- File JavaScript presenti ma non collegati alle pagine:
-  - `app.js` (smooth scroll su anchor)
-  - `js/main.js` (caricamento dinamico contenuti da JSON)
-- Nessuna funzionalita applicativa attiva lato utente (es. ricerca, filtri, form, login, backend).
+### Home
+- Hero introduttiva della piattaforma dinamica.
+- Sezione architettura con card per Wiki/Blog/Forum/Contributi.
+- Timeline MVP operativa (repo unico, routing, discussioni, PR, deploy).
+
+### Wiki
+Per ogni pagina (Xbox, 360, One, Serie):
+- Hero contestuale.
+- Timeline dedicata.
+- Card dei sotto-modelli/revisioni.
+- Blocco approfondimenti.
+- CTA per contributi.
+
+Extra su `Xbox Serie`:
+- Confronto strutturato `Series X` vs `Series S` con specifiche.
+
+### Blog
+- Lista post in card con data, estratto e tag.
+- Sezione pensata per aggiornamenti tecnici/editoriali del progetto.
+
+### Forum
+- Presentazione delle due opzioni target:
+  - GitHub Discussions
+  - Discourse
+- Linee guida operative in formato timeline (tag, moderazione, sintesi in wiki).
+
+### Contributi
+- Workflow in 6 step stile GitHub:
+  1. Fork/branch
+  2. Modifica contenuti
+  3. Pull Request
+  4. Revisione
+  5. Merge
+  6. Deploy automatico
+- Tabella stack funzionale (Wiki, Blog, Forum, Contributi, Hosting).
+
+## Scelte UX/UI applicate
+- Palette Xbox ufficiale ABXY:
+  - A `#107C10`
+  - B `#E81123`
+  - X `#0063B1`
+  - Y `#FFB900`
+- Font family orientata a Segoe (`Segoe UI Variable`, `Segoe UI`, `Segoe Pro`).
+- Componenti uniformi: card, timeline, bottoni, badge, tabella e dropdown.
+- Layout responsive mobile-first con breakpoint a `640px`.
+
+## File attivi
+- `index.html` -> shell SPA + menu
+- `app.js` -> routing + rendering contenuti
+- `styles.css` -> stile globale completo
+- `FUNZIONALITA.md` -> documento stato funzionale
+
+## File rimossi nella migrazione
+- `xbox-original.html`
+- `xbox-360.html`
+- `xbox-one.html`
+- `xbox-series.html`
+- `js/main.js`
+
+## Stato tecnico
+- Backend: assente (volutamente).
+- Database: assente (volutamente).
+- Deploy: pronto per hosting statico (GitHub Pages / Netlify / Vercel).
 
 ## Registro aggiornamenti
-- Ultima verifica funzionalita: **2026-02-23**
-- Prossimo aggiornamento: _da compilare_
+- Migrazione strutturale a SPA completata: **2026-02-24**
+- Prossimo step suggerito: collegare dati Wiki/Blog a file Markdown o JSON versionati e aggiungere pipeline CI/CD.

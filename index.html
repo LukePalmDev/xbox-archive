@@ -3,231 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Box | Universo Xbox</title>
+    <title>Project Box | Wiki, Blog, Forum e Contributi Xbox</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="page-wrapper">
       <header class="navbar">
         <div class="container inner">
-          <a class="brand" href="index.html">Project Box</a>
-          <nav class="nav-links">
-            <a href="index.html" class="active" aria-current="page">Home</a>
-            <a href="xbox-original.html">Xbox Original</a>
-            <a href="xbox-360.html">Xbox 360</a>
-            <a href="xbox-one.html">Xbox One</a>
-            <a href="xbox-series.html">Xbox Series</a>
+          <a class="brand" href="#/home">Project Box</a>
+          <nav class="nav-links" aria-label="Navigazione principale">
+            <a href="#/home" data-route="home">Home</a>
+            <details class="wiki-group">
+              <summary class="nav-trigger" data-route="wiki">Wiki</summary>
+              <div class="wiki-menu">
+                <a href="#/wiki/xbox" data-route="wiki/xbox">Xbox</a>
+                <a href="#/wiki/xbox-360" data-route="wiki/xbox-360">Xbox 360</a>
+                <a href="#/wiki/xbox-one" data-route="wiki/xbox-one">Xbox One</a>
+                <a href="#/wiki/xbox-series" data-route="wiki/xbox-series">Xbox Serie</a>
+              </div>
+            </details>
+            <a href="#/blog" data-route="blog">Blog</a>
+            <a href="#/forum" data-route="forum">Forum</a>
+            <a href="#/contributi" data-route="contributi">Contributi</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <div class="hero-text">
-              <span class="highlight">Archivio interattivo</span>
-              <h1>
-                Esplora tutte le console Xbox<br />
-                in un'unica esperienza curata
-              </h1>
-              <p>
-                Project Box è un archivio digitale dedicato all'ecosistema Xbox.
-                Qui puoi scoprire ogni generazione, approfondire i modelli
-                speciali e trovare curiosità che hanno segnato la storia del
-                gaming targato Microsoft.
-              </p>
-              <div class="hero-actions">
-                <a class="button primary" href="xbox-series.html"
-                  >Scopri l'ultima generazione</a
-                >
-                <a class="button secondary" href="#percorso"
-                  >Come nasce il progetto</a
-                >
-              </div>
-            </div>
-            <div class="hero-media">
-              <div class="callout">
-                <h3>Una collezione viva</h3>
-                <p>
-                  Aggiorniamo costantemente il catalogo con edizioni limitate,
-                  accessori e storie della community Xbox. Seguici nel viaggio.
-                </p>
-                <a class="button primary" href="xbox-original.html"
-                  >Inizia dal principio</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
+      <main id="app-content" class="app-main" aria-live="polite"></main>
 
-        <section class="section" id="percorso">
-          <div class="container">
-            <div class="section-header">
-              <span class="highlight">La nostra missione</span>
-              <h2>Un archivio ispirato al design, dedicato ai fan</h2>
-              <p>
-                Project Box nasce per offrire un'esperienza elegante nello stile
-                Apple ma con il cuore verde Xbox. Ogni pagina raccoglie
-                informazioni, timeline e modelli in modo chiaro e visivamente
-                immersivo.
-              </p>
-            </div>
-            <div class="card-grid">
-              <article class="card">
-                <h3>Ricerca curata</h3>
-                <p>
-                  Ogni generazione viene raccontata con schede dedicate,
-                  approfondimenti sulle revisioni hardware e curiosità sugli
-                  accessori storici.
-                </p>
-                <div class="tag-list">
-                  <span class="tag">Dati tecnici</span>
-                  <span class="tag">Storia</span>
-                  <span class="tag">Icone</span>
-                </div>
-              </article>
-              <article class="card">
-                <h3>Esperienza guidata</h3>
-                <p>
-                  Navigazione rapida tra le generazioni, con percorsi suggeriti
-                  e collegamenti diretti tra i modelli successivi e precedenti.
-                </p>
-                <div class="tag-list">
-                  <span class="tag">Timeline</span>
-                  <span class="tag">Comparazioni</span>
-                  <span class="tag">Edizioni speciali</span>
-                </div>
-              </article>
-              <article class="card">
-                <h3>Community first</h3>
-                <p>
-                  Spazio dedicato alle storie della community, eventi chiave e
-                  un archivio di spot e campagne che hanno segnato l'immaginario
-                  Xbox.
-                </p>
-                <div class="tag-list">
-                  <span class="tag">Community</span>
-                  <span class="tag">Marketing</span>
-                  <span class="tag">Curiosità</span>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="section-header">
-              <span class="highlight">Linee del tempo</span>
-              <h2>Quattro generazioni che hanno ridefinito il gioco</h2>
-              <p>
-                Dal 2001 a oggi, Xbox ha introdotto innovazioni hardware e
-                servizi che hanno cambiato il modo di giocare. Scopri la timeline
-                rapida di ogni generazione.
-              </p>
-            </div>
-            <div class="timeline">
-              <div class="timeline-item">
-                <span>2001</span>
-                <h4>Xbox Original</h4>
-                <p>
-                  L'ingresso di Microsoft nel mondo console con un focus su
-                  potenza e servizi online pionieristici.
-                </p>
-              </div>
-              <div class="timeline-item">
-                <span>2005</span>
-                <h4>Xbox 360</h4>
-                <p>
-                  Marketplace, avatar e Kinect rivoluzionano l'intrattenimento
-                  domestico HD.
-                </p>
-              </div>
-              <div class="timeline-item">
-                <span>2013</span>
-                <h4>Xbox One</h4>
-                <p>
-                  TV, app, retrocompatibilità e un ecosistema unificato tra
-                  console e PC.
-                </p>
-              </div>
-              <div class="timeline-item">
-                <span>2020</span>
-                <h4>Xbox Series</h4>
-                <p>
-                  SSD ultra-rapido, Ray Tracing e Xbox Game Pass al centro
-                  di un'esperienza next-gen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="section-header">
-              <span class="highlight">Catalogo rapido</span>
-              <h2>Vai direttamente alla generazione che ami</h2>
-              <p>
-                Ogni pagina include schede dedicate ai sotto-modelli con
-                specifiche sintetiche e differenze principali per orientarti a
-                colpo d'occhio.
-              </p>
-            </div>
-            <div class="card-grid">
-              <article class="card">
-                <h3>Xbox Original</h3>
-                <p>
-                  L'inizio di tutto: controller Duke, XBL e design iconico verde
-                  neon.
-                </p>
-                <a class="button secondary" href="xbox-original.html"
-                  >Vai alla pagina</a
-                >
-              </article>
-              <article class="card">
-                <h3>Xbox 360</h3>
-                <p>
-                  L'era HD con Marketplace, Kinect e innumerevoli edizioni
-                  speciali.
-                </p>
-                <a class="button secondary" href="xbox-360.html"
-                  >Vai alla pagina</a
-                >
-              </article>
-              <article class="card">
-                <h3>Xbox One</h3>
-                <p>
-                  Dal modello originale a One X, con un focus su media e
-                  retrocompatibilità.
-                </p>
-                <a class="button secondary" href="xbox-one.html"
-                  >Vai alla pagina</a
-                >
-              </article>
-              <article class="card">
-                <h3>Xbox Series</h3>
-                <p>
-                  Prestazioni next-gen tra Series X e S, con servizi cloud e
-                  Smart Delivery.
-                </p>
-                <a class="button secondary" href="xbox-series.html"
-                  >Vai alla pagina</a
-                >
-              </article>
-            </div>
-          </div>
-        </section>
-      </main>
       <footer class="footer">
         <div class="container">
-          <div>© 2024 Project Box. Archivio indipendente dedicato al mondo Xbox.</div>
+          <div>© 2026 Project Box. Archivio dinamico dedicato al mondo Xbox.</div>
           <div class="footer-links">
-            <a href="#percorso">Missione</a>
-            <a href="mailto:ciao@projectbox.it">Contatti</a>
-            <a href="https://www.xbox.com" target="_blank" rel="noreferrer"
-              >Xbox.com</a
-            >
+            <a href="#/wiki/xbox" data-route="wiki/xbox">Wiki</a>
+            <a href="#/blog" data-route="blog">Blog</a>
+            <a href="#/forum" data-route="forum">Forum</a>
+            <a href="#/contributi" data-route="contributi">Contributi</a>
+            <a href="https://www.xbox.com" target="_blank" rel="noreferrer">Xbox.com</a>
           </div>
         </div>
       </footer>
