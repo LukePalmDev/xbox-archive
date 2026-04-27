@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Box | Wiki, Blog, Forum e Contributi Xbox</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <div class="page-wrapper">
-      <header class="navbar">
-        <div class="container inner">
-          <a class="brand" href="#/home">Project Box</a>
-          <nav class="nav-links" aria-label="Navigazione principale">
-            <a href="#/home" data-route="home">Home</a>
-            <details class="wiki-group">
-              <summary class="nav-trigger" data-route="wiki">Wiki</summary>
-              <div class="wiki-menu">
-                <a href="#/wiki/xbox" data-route="wiki/xbox">Xbox</a>
-                <a href="#/wiki/xbox-360" data-route="wiki/xbox-360">Xbox 360</a>
-                <a href="#/wiki/xbox-one" data-route="wiki/xbox-one">Xbox One</a>
-                <a href="#/wiki/xbox-series" data-route="wiki/xbox-series">Xbox Serie</a>
-              </div>
-            </details>
-            <a href="#/blog" data-route="blog">Blog</a>
-            <a href="#/forum" data-route="forum">Forum</a>
-            <a href="#/contributi" data-route="contributi">Contributi</a>
-          </nav>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project Box — Archivio Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#/home" data-route="home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">project<em>box</em></span>
+          <span class="brand-meta">v.026 / it</span>
+        </a>
+        <nav class="nav" aria-label="Navigazione principale">
+          <a href="#/home" data-route="home"><span class="nav-num">01</span> indice</a>
+          <details class="wiki-group">
+            <summary class="nav-trigger" data-route="wiki"><span class="nav-num">02</span> archivio</summary>
+            <div class="wiki-menu" role="menu">
+              <a href="#/wiki/xbox" data-route="wiki/xbox"><span>2001</span>generazione i</a>
+              <a href="#/wiki/xbox-360" data-route="wiki/xbox-360"><span>2005</span>generazione ii</a>
+              <a href="#/wiki/xbox-one" data-route="wiki/xbox-one"><span>2013</span>generazione iii</a>
+              <a href="#/wiki/xbox-series" data-route="wiki/xbox-series"><span>2020</span>generazione iv</a>
+            </div>
+          </details>
+          <a href="#/blog" data-route="blog"><span class="nav-num">03</span> diario</a>
+          <a href="#/forum" data-route="forum"><span class="nav-num">04</span> forum</a>
+          <a href="#/contributi" data-route="contributi"><span class="nav-num">05</span> contributi</a>
+        </nav>
+        <div class="topbar-meta">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">archivio aperto</span>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main id="app-content" class="app-main" aria-live="polite"></main>
+    <main id="app-content" class="main" aria-live="polite"></main>
 
-      <footer class="footer">
-        <div class="container">
-          <div>© 2026 Project Box. Archivio dinamico dedicato al mondo Xbox.</div>
-          <div class="footer-links">
-            <a href="#/wiki/xbox" data-route="wiki/xbox">Wiki</a>
-            <a href="#/blog" data-route="blog">Blog</a>
-            <a href="#/forum" data-route="forum">Forum</a>
-            <a href="#/contributi" data-route="contributi">Contributi</a>
-            <a href="https://www.xbox.com" target="_blank" rel="noreferrer">Xbox.com</a>
-          </div>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-num">f.01</div>
+          <div class="footer-title">project box</div>
+          <div class="footer-text">archivio aperto e indipendente dedicato alla storia delle console domestiche di quarta generazione e successive.</div>
         </div>
-      </footer>
-    </div>
-  </body>
+        <div class="footer-col">
+          <div class="footer-num">f.02</div>
+          <div class="footer-title">indice</div>
+          <ul class="footer-list">
+            <li><a href="#/home" data-route="home">indice</a></li>
+            <li><a href="#/wiki/xbox" data-route="wiki/xbox">archivio</a></li>
+            <li><a href="#/blog" data-route="blog">diario</a></li>
+            <li><a href="#/forum" data-route="forum">forum</a></li>
+            <li><a href="#/contributi" data-route="contributi">contributi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-num">f.03</div>
+          <div class="footer-title">colophon</div>
+          <ul class="footer-list">
+            <li>tipografia · inter / jetbrains mono / fraunces</li>
+            <li>griglia · 12 colonne, hairline 0.5px</li>
+            <li>palette · warm white &amp; peach</li>
+            <li>build · static spa · hash routing</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-num">f.04</div>
+          <div class="footer-title">2026</div>
+          <div class="footer-text">progetto editoriale indipendente, non affiliato ai produttori delle piattaforme citate. tutti i marchi appartengono ai rispettivi proprietari.</div>
+        </div>
+      </div>
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <span>project box · console archive · 2026</span>
+        <span>made with care · roma / it</span>
+      </div>
+    </footer>
+  </div>
+
+  <div id="tweaks-root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks.jsx"></script>
+</body>
 </html>

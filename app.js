@@ -1,942 +1,518 @@
-const wikiOrder = ["xbox", "xbox-360", "xbox-one", "xbox-series"];
-
-const wikiPages = {
-  xbox: {
-    navLabel: "Xbox",
-    heroLabel: "2001 · Prima generazione",
-    title: "Xbox",
-    intro:
-      "La prima console Microsoft porta in salotto un hardware PC-like, l'identita visiva verde Xbox e le basi del multiplayer online moderno.",
-    callout: {
-      title: "Icone dell'esordio",
-      description:
-        "Halo: Combat Evolved, controller Duke e lancio di Xbox Live hanno definito il DNA della piattaforma.",
-      href: "https://www.xbox.com/it-IT/games/halo-combat-evolved",
-      label: "Scopri Halo"
-    },
-    timelineTitle: "Le tappe principali della prima Xbox",
-    timelineDescription:
-      "Una generazione breve ma decisiva che ha costruito le fondamenta del brand.",
-    timeline: [
-      {
-        date: "Gennaio 2001",
-        title: "Annuncio ufficiale",
-        description:
-          "Bill Gates presenta Xbox al CES con una strategia fortemente orientata alle performance."
-      },
-      {
-        date: "Novembre 2001",
-        title: "Lancio in Nord America",
-        description:
-          "Debutta con Halo: Combat Evolved e supporto nativo al multiplayer locale su larga scala."
-      },
-      {
-        date: "2002",
-        title: "Arriva Xbox Live",
-        description:
-          "Servizio online unificato con matchmaking, chat vocale e identita persistente del giocatore."
-      },
-      {
-        date: "2004-2005",
-        title: "Revisioni finali",
-        description:
-          "Controller S e revisioni interne migliorano ergonomia e affidabilita prima del passaggio a Xbox 360."
-      }
-    ],
-    modelsTitle: "Sotto-modelli e revisioni",
-    modelsDescription:
-      "Le varianti hardware che hanno accompagnato l'evoluzione della prima generazione.",
-    models: [
-      {
-        name: "Xbox Launch Edition",
-        description: "Versione originale con controller Duke e HDD integrato.",
-        tags: ["2001", "Duke", "8 GB"]
-      },
-      {
-        name: "Controller S Bundle",
-        description: "Introduzione graduale del pad piu compatto in Europa e Giappone.",
-        tags: ["2002", "Ergonomia", "Retail"]
-      },
-      {
-        name: "Revisione 1.6",
-        description: "Aggiornamento motherboard con piccoli miglioramenti termici.",
-        tags: ["2004", "Board", "Stabilita"]
-      },
-      {
-        name: "Xbox Crystal",
-        description: "Edizione trasparente iconica molto apprezzata dai collezionisti.",
-        tags: ["Limited", "Design", "Europa"]
-      }
-    ],
-    extraTitle: "Eredita",
-    extraDescription:
-      "La prima Xbox ha dimostrato che Microsoft poteva competere nelle console e costruire un ecosistema proprietario.",
-    extraCards: [
-      {
-        title: "DNA online",
-        description: "Xbox Live diventa il punto di riferimento per servizi premium su console."
-      },
-      {
-        title: "Base tecnica",
-        description: "Hard disk, Ethernet e dashboard aprono la strada alla generazione successiva."
-      },
-      {
-        title: "Identita visiva",
-        description: "Logo, verde brand e linguaggio estetico definiscono l'immaginario Xbox."
-      }
-    ]
-  },
-  "xbox-360": {
-    navLabel: "Xbox 360",
-    heroLabel: "2005 · Alta definizione",
-    title: "Xbox 360",
-    intro:
-      "Xbox 360 porta HD, marketplace digitale e servizi online al centro dell'esperienza domestica.",
-    callout: {
-      title: "Generazione espansiva",
-      description:
-        "Xbox Live Arcade, update costanti e Kinect hanno trasformato la console in un ecosistema completo.",
-      href: "https://www.xbox.com/it-IT/xbox-360",
-      label: "Archivio ufficiale"
-    },
-    timelineTitle: "Timeline dell'era 360",
-    timelineDescription:
-      "Una piattaforma longeva con revisioni hardware e una libreria enorme.",
-    timeline: [
-      {
-        date: "2005",
-        title: "Core e Premium",
-        description:
-          "Lancio con due SKU principali e focus su gioco online e servizi digitali."
-      },
-      {
-        date: "2007-2008",
-        title: "Elite e Jasper",
-        description:
-          "Versioni aggiornate con consumi ridotti e miglior gestione termica."
-      },
-      {
-        date: "2010",
-        title: "Xbox 360 S",
-        description:
-          "Design rinnovato, Wi-Fi integrato e supporto completo a Kinect."
-      },
-      {
-        date: "2013",
-        title: "Xbox 360 E",
-        description:
-          "Ultima revisione estetica prima della transizione completa a Xbox One."
-      }
-    ],
-    modelsTitle: "Modelli principali",
-    modelsDescription:
-      "Le edizioni che hanno scandito il ciclo vitale di Xbox 360.",
-    models: [
-      {
-        name: "Xbox 360 Premium",
-        description: "Hard disk da 20 GB, wireless controller e component HD.",
-        tags: ["2005", "HD", "Xbox Live"]
-      },
-      {
-        name: "Xbox 360 Elite",
-        description: "Finitura nera e maggiore capacita storage per utenti hardcore.",
-        tags: ["2007", "120 GB", "Black"]
-      },
-      {
-        name: "Xbox 360 S",
-        description: "Ridisegno completo della scocca e migliore silenziosita.",
-        tags: ["2010", "Wi-Fi", "Kinect"]
-      },
-      {
-        name: "Xbox 360 E",
-        description: "Linea ispirata a Xbox One, ultima versione consumer.",
-        tags: ["2013", "Refresh", "Finale"]
-      }
-    ],
-    extraTitle: "Servizi distintivi",
-    extraDescription:
-      "Tre pilastri che hanno reso Xbox 360 la piattaforma piu influente dell'epoca.",
-    extraCards: [
-      {
-        title: "Xbox Live Gold",
-        description: "Multiplayer online, party chat e offerte dedicate agli abbonati."
-      },
-      {
-        title: "Marketplace",
-        description: "Download digitali di giochi, DLC, avatar item e contenuti multimediali."
-      },
-      {
-        title: "Kinect",
-        description: "Interazione motion control senza controller con supporto dedicato."
-      }
-    ]
-  },
-  "xbox-one": {
-    navLabel: "Xbox One",
-    heroLabel: "2013 · Ecosistema unificato",
-    title: "Xbox One",
-    intro:
-      "Una generazione che parte come hub multimediale e si evolve verso prestazioni, compatibilita e servizi.",
-    callout: {
-      title: "Transizione strategica",
-      description:
-        "Retrocompatibilita e Xbox Game Pass cambiano il focus da singolo hardware a ecosistema continuo.",
-      href: "https://www.xbox.com/it-IT/consoles/xbox-one-x",
-      label: "Linea Xbox One"
-    },
-    timelineTitle: "Dall'esordio al mid-gen",
-    timelineDescription:
-      "Un percorso di riposizionamento guidato da feedback della community.",
-    timeline: [
-      {
-        date: "2013",
-        title: "Lancio con Kinect 2.0",
-        description: "Focus su TV, app e integrazione multimediale nel salotto."
-      },
-      {
-        date: "2014-2015",
-        title: "Cambio direzione",
-        description:
-          "Introduzione bundle senza Kinect e update software orientati al gaming puro."
-      },
-      {
-        date: "2016",
-        title: "Xbox One S",
-        description: "Design compatto con supporto video 4K e HDR su giochi selezionati."
-      },
-      {
-        date: "2017",
-        title: "Xbox One X",
-        description: "Modello premium con forte incremento di potenza e resa 4K."
-      }
-    ],
-    modelsTitle: "Revisione della gamma",
-    modelsDescription:
-      "Le varianti hardware che definiscono la fase Xbox One.",
-    models: [
-      {
-        name: "Xbox One",
-        description: "Modello originario con alimentatore esterno e focus entertainment.",
-        tags: ["2013", "Kinect", "All-in-One"]
-      },
-      {
-        name: "Xbox One S",
-        description: "Formato ridotto, lettore UHD Blu-ray e case bianco opaco.",
-        tags: ["2016", "HDR", "Slim"]
-      },
-      {
-        name: "Xbox One X",
-        description: "La console piu potente della sua generazione al lancio.",
-        tags: ["2017", "4K", "Performance"]
-      },
-      {
-        name: "Edizioni speciali",
-        description: "Versioni limitate dedicate a franchise come Gears e Cyberpunk.",
-        tags: ["Limited", "Collector", "Design"]
-      }
-    ],
-    extraTitle: "Ecosistema software",
-    extraDescription:
-      "I servizi che hanno preparato il terreno alla filosofia Xbox moderna.",
-    extraCards: [
-      {
-        title: "Backward Compatibility",
-        description: "Supporto a titoli Xbox 360 e Xbox originale su hardware piu recente."
-      },
-      {
-        title: "Game Pass",
-        description: "Abbonamento a libreria giochi con aggiornamento continuo del catalogo."
-      },
-      {
-        title: "Xbox Play Anywhere",
-        description: "Acquisto unico e progressi condivisi tra console Xbox e PC Windows."
-      }
-    ]
-  },
-  "xbox-series": {
-    navLabel: "Xbox Serie",
-    heroLabel: "2020 · Power Your Dreams",
-    title: "Xbox Serie X|S",
-    intro:
-      "La generazione Series combina SSD, architettura avanzata e servizi cloud in una piattaforma flessibile.",
-    callout: {
-      title: "Servizi al centro",
-      description:
-        "Game Pass, cloud e retrocompatibilita rendono l'accesso ai giochi indipendente dal solo hardware.",
-      href: "https://www.xbox.com/it-IT/consoles",
-      label: "Console attuali"
-    },
-    timelineTitle: "Evoluzione della generazione Series",
-    timelineDescription:
-      "Dalla rivelazione Project Scarlett all'espansione cloud multi-dispositivo.",
-    timeline: [
-      {
-        date: "2019",
-        title: "Project Scarlett",
-        description: "Annuncio della visione next-gen con enfasi su velocita e latenza ridotta."
-      },
-      {
-        date: "Novembre 2020",
-        title: "Lancio X|S",
-        description: "Due modelli complementari: alta fedelta e accesso digitale."
-      },
-      {
-        date: "2021",
-        title: "FPS Boost",
-        description: "Miglioramenti retrocompatibili per aumentare frame rate di titoli legacy."
-      },
-      {
-        date: "2022-2026",
-        title: "Cloud e update continui",
-        description: "Crescita di Xbox Cloud Gaming e del valore complessivo di Game Pass."
-      }
-    ],
-    modelsTitle: "Confronto modelli",
-    modelsDescription:
-      "Series X e Series S coprono target diversi condividendo la stessa base generazionale.",
-    models: [
-      {
-        name: "Xbox Series X",
-        description: "Design monolitico e target 4K nativo fino a 120 fps.",
-        tags: ["12 TFLOPS", "1 TB SSD", "4K"]
-      },
-      {
-        name: "Xbox Series S",
-        description: "Formato compatto, solo digitale e target 1440p fino a 120 fps.",
-        tags: ["4 TFLOPS", "512 GB SSD", "Digital"]
-      },
-      {
-        name: "Quick Resume",
-        description: "Ripresa immediata di sessioni multiple senza ricaricare i titoli.",
-        tags: ["UX", "Velocita", "Sistema"]
-      },
-      {
-        name: "Velocity Architecture",
-        description: "Pipeline storage ottimizzata per ridurre i colli di bottiglia in lettura asset.",
-        tags: ["NVMe", "IO", "Next-Gen"]
-      }
-    ],
-    comparison: [
-      {
-        label: "Xbox Series X",
-        title: "Potenza assoluta",
-        description: "Pensata per resa massima su schermi 4K e prestazioni stabili.",
-        specs: [
-          { key: "GPU", value: "12 TFLOPS RDNA 2" },
-          { key: "CPU", value: "Zen 2 8 core 3.8 GHz" },
-          { key: "Storage", value: "SSD NVMe 1 TB" },
-          { key: "Target", value: "4K / 120 fps" }
-        ]
-      },
-      {
-        label: "Xbox Series S",
-        title: "Digitale compatta",
-        description: "Ingresso accessibile alla generazione corrente in formato ridotto.",
-        specs: [
-          { key: "GPU", value: "4 TFLOPS RDNA 2" },
-          { key: "CPU", value: "Zen 2 8 core 3.6 GHz" },
-          { key: "Storage", value: "SSD NVMe 512 GB" },
-          { key: "Target", value: "1440p / 120 fps" }
-        ]
-      }
-    ]
-  }
-};
-
-const blogPosts = [
-  {
-    date: "24 febbraio 2026",
-    title: "Roadmap Project Box: da archivio statico a piattaforma modulare",
-    excerpt:
-      "Definizione della nuova architettura: wiki + blog + forum + contributi Git con deploy automatico.",
-    tags: ["Roadmap", "Architettura", "MVP"]
-  },
-  {
-    date: "18 febbraio 2026",
-    title: "Perche separare contenuti, discussioni e contributi",
-    excerpt:
-      "Separare wiki/blog dal forum riduce complessita applicativa e rende il progetto scalabile nel tempo.",
-    tags: ["Scalabilita", "Design", "Best Practice"]
-  },
-  {
-    date: "10 febbraio 2026",
-    title: "ABXY brand colors: standard grafico applicato al sito",
-    excerpt:
-      "Adozione dei codici Microsoft ufficiali per A, B, X, Y e consolidamento tipografico basato su Segoe.",
-    tags: ["Design", "Brand", "UI"]
-  }
-];
-
-const forumChannels = [
-  {
-    title: "GitHub Discussions",
-    description:
-      "Canale consigliato per discussioni tecniche, Q&A e proposte legate alla wiki e ai contenuti del progetto.",
-    ctaLabel: "Apri Discussions",
-    ctaHref: "https://github.com/features/discussions",
-    tags: ["Zero backend", "Workflow Git", "Moderazione semplice"]
-  },
-  {
-    title: "Discourse",
-    description:
-      "Soluzione completa per community piu ampia con ruoli, categorie, notifiche e strumenti avanzati di moderazione.",
-    ctaLabel: "Valuta Discourse",
-    ctaHref: "https://www.discourse.org/",
-    tags: ["Self-hosted", "Moderazione", "Scalabile"]
-  }
-];
-
-const forumGuidelines = [
-  {
-    date: "1",
-    title: "Apri discussione contestuale",
-    description: "Ogni thread deve essere legato a una pagina wiki, un post blog o una proposta concreta."
-  },
-  {
-    date: "2",
-    title: "Tag obbligatori",
-    description: "Classifica i thread con tag come modelli, timeline, hardware, software, contributi."
-  },
-  {
-    date: "3",
-    title: "Moderazione minima",
-    description: "Linee guida pubbliche, escalation trasparente e chiusura thread duplicati."
-  },
-  {
-    date: "4",
-    title: "Sintesi in wiki",
-    description: "Le discussioni risolte che portano valore vanno trasformate in aggiornamenti documentati."
-  }
-];
-
-const contributionSteps = [
-  {
-    title: "Fork o branch dedicato",
-    description: "L'utente parte dai file Markdown/JS del progetto e prepara la modifica localmente."
-  },
-  {
-    title: "Modifica contenuto",
-    description: "Aggiorna dati wiki/blog mantenendo tono editoriale, struttura e naming coerenti."
-  },
-  {
-    title: "Pull Request",
-    description: "Apre PR con descrizione chiara, contesto, fonti e motivazione dell'intervento."
-  },
-  {
-    title: "Revisione",
-    description: "Maintainer controlla accuratezza, coerenza visuale e impatto su navigazione/routing."
-  },
-  {
-    title: "Merge",
-    description: "Una volta approvata, la PR viene integrata nel branch principale."
-  },
-  {
-    title: "Deploy automatico",
-    description: "Pipeline CI/CD pubblica immediatamente l'aggiornamento in produzione."
-  }
-];
-
-const stackRows = [
-  ["Wiki", "Contenuti strutturati versionati", "Markdown + rendering JS"],
-  ["Blog", "Aggiornamenti editoriali", "Markdown/JSON + template SPA"],
-  ["Forum", "Discussioni community", "GitHub Discussions o Discourse"],
-  ["Contributi", "Workflow collaborativo", "Pull Request + Code Review"],
-  ["Hosting", "Deploy continuo", "Netlify / Vercel / GitHub Pages"]
-];
+// ============================================
+// PROJECT BOX — app (rendering + routing)
+// ============================================
 
 const routes = {
-  home: renderHome,
-  blog: renderBlog,
-  forum: renderForum,
-  contributi: renderContributi,
-  "wiki/xbox": () => renderWiki("xbox"),
-  "wiki/xbox-360": () => renderWiki("xbox-360"),
-  "wiki/xbox-one": () => renderWiki("xbox-one"),
+  "home":             renderHome,
+  "blog":             renderBlog,
+  "forum":            renderForum,
+  "contributi":       renderContributi,
+  "wiki/xbox":        () => renderWiki("xbox"),
+  "wiki/xbox-360":    () => renderWiki("xbox-360"),
+  "wiki/xbox-one":    () => renderWiki("xbox-one"),
   "wiki/xbox-series": () => renderWiki("xbox-series")
 };
 
 const titles = {
-  home: "Project Box | Home",
-  blog: "Project Box | Blog",
-  forum: "Project Box | Forum",
-  contributi: "Project Box | Contributi",
-  "wiki/xbox": "Project Box | Wiki Xbox",
-  "wiki/xbox-360": "Project Box | Wiki Xbox 360",
-  "wiki/xbox-one": "Project Box | Wiki Xbox One",
-  "wiki/xbox-series": "Project Box | Wiki Xbox Serie"
+  "home":             "project box · indice",
+  "blog":             "project box · diario",
+  "forum":            "project box · forum",
+  "contributi":       "project box · contributi",
+  "wiki/xbox":        "project box · gen i",
+  "wiki/xbox-360":    "project box · gen ii",
+  "wiki/xbox-one":    "project box · gen iii",
+  "wiki/xbox-series": "project box · gen iv"
+};
+
+const labels = {
+  "home":             "01 / indice",
+  "wiki/xbox":        "02 / archivio · gen i",
+  "wiki/xbox-360":    "02 / archivio · gen ii",
+  "wiki/xbox-one":    "02 / archivio · gen iii",
+  "wiki/xbox-series": "02 / archivio · gen iv",
+  "blog":             "03 / diario",
+  "forum":            "04 / forum",
+  "contributi":       "05 / contributi"
 };
 
 const appContainer = document.getElementById("app-content");
 const wikiGroup = document.querySelector(".wiki-group");
 
+// ---------- helpers ----------
 function getRouteFromHash() {
-  const rawHash = window.location.hash.replace(/^#\/?/, "").trim();
-  return rawHash || "home";
+  return window.location.hash.replace(/^#\/?/, "").trim() || "home";
 }
-
-function normalizeRoute(route) {
-  if (routes[route]) {
-    return route;
-  }
-
-  if (route === "wiki") {
-    return "wiki/xbox";
-  }
-
+function normalizeRoute(r) {
+  if (routes[r]) return r;
+  if (r === "wiki") return "wiki/xbox";
   return "home";
 }
+function pad(n, w = 2) { return String(n).padStart(w, "0"); }
 
-function renderTagList(tags) {
+function ruleRow(left, right) {
   return `
-    <div class="tag-list">
-      ${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-    </div>
-  `;
+    <div class="rule-row">
+      <div class="rule-inner">
+        <span>${left}</span>
+        <span>${right}</span>
+      </div>
+    </div>`;
 }
 
-function renderTimeline(items) {
-  return `
-    <div class="timeline">
-      ${items
-        .map(
-          (item) => `
-            <div class="timeline-item">
-              <span>${item.date}</span>
-              <h4>${item.title}</h4>
-              <p>${item.description}</p>
-            </div>
-          `
-        )
-        .join("")}
-    </div>
-  `;
+function tags(arr) {
+  if (!arr || !arr.length) return "";
+  return `<div class="tags">${arr.map(t => `<span class="tag">${t}</span>`).join("")}</div>`;
 }
 
-function renderCardGrid(cards) {
-  return `
-    <div class="card-grid">
-      ${cards
-        .map(
-          (card) => `
-            <article class="card">
-              <h3>${card.name || card.title}</h3>
-              <p>${card.description || card.excerpt}</p>
-              ${card.tags ? renderTagList(card.tags) : ""}
-              ${card.date ? `<p class="meta-line">${card.date}</p>` : ""}
-            </article>
-          `
-        )
-        .join("")}
-    </div>
-  `;
-}
-
+// ---------- home ----------
 function renderHome() {
+  const today = new Date();
+  const stamp = today.toISOString().slice(0,10).replace(/-/g, ".");
+
+  const generationsHtml = generations.map(g => `
+    <a class="gen-card" href="#/wiki/${g.slug}" data-route="wiki/${g.slug}">
+      <div class="num">gen.${pad(generations.indexOf(g)+1)} · ${g.year}</div>
+      <div class="ph"><span>${g.placeholder}</span></div>
+      <h3 class="gen-title">${g.title}</h3>
+      <div class="gen-year">${g.label.toLowerCase()}</div>
+      <div class="gen-arrow">apri scheda →</div>
+    </a>
+  `).join("");
+
   return `
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <span class="highlight">Piattaforma dinamica</span>
-          <h1>Wiki, Blog, Forum e Contributi in un unico flusso</h1>
-          <p>
-            Project Box e ora una single-page app: un solo entrypoint HTML, routing client-side
-            e contenuti gestiti in JavaScript per ridurre duplicazioni e velocizzare evoluzione e manutenzione.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#/wiki/xbox" data-route="wiki/xbox">Apri la Wiki</a>
-            <a class="button secondary" href="#/contributi" data-route="contributi">Workflow contributi</a>
-          </div>
+    <section class="hero-home">
+      <div class="hero-meta">
+        <span>archivio · v.026</span>
+        <span>${stamp}</span>
+        <span>generazioni · 04</span>
+        <span>schede · 16</span>
+      </div>
+
+      <div class="hero-stage">
+        <h1 class="hero-display">
+          un archivio<br>aperto delle<br>console <em>domestiche</em>
+          <span class="small">project box è un archivio editoriale indipendente: una raccolta strutturata di schede, timeline e revisioni hardware, mantenuta in pubblico tramite workflow git aperti.</span>
+          <span class="btn-row">
+            <a class="btn primary" href="#/wiki/xbox" data-route="wiki/xbox">apri archivio <span class="arrow">→</span></a>
+            <a class="btn" href="#/contributi" data-route="contributi">contribuisci</a>
+          </span>
+        </h1>
+        <aside class="hero-side">
+          <div class="placeholder"><span class="placeholder-label">cover.archive.render</span></div>
+          <h4>fig.01 / index card</h4>
+          <p>quattro generazioni, sedici schede modello, cento eventi documentati. una mappa testuale e visiva del medium console domestico.</p>
+        </aside>
+      </div>
+    </section>
+
+    ${ruleRow("§ 01 — generazioni documentate", "scorri ↓  · 04 schede principali")}
+
+    <section>
+      <div class="gen-grid">
+        ${generationsHtml}
+      </div>
+    </section>
+
+    ${ruleRow("§ 02 — architettura del progetto", "wiki · diario · forum · contributi")}
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="col-label"><span class="marker"></span>architettura</span>
         </div>
-        <div class="hero-media">
-          <div class="callout">
-            <h3>MVP operativo</h3>
-            <p>
-              Nessun backend custom per partire: contenuti versionati, discussioni separate e deploy automatico.
-            </p>
-            <a class="button secondary" href="#/forum" data-route="forum">Area discussioni</a>
+        <div>
+          <h2>quattro aree, un solo <em>flusso</em> editoriale.</h2>
+          <p class="lede">il progetto è separato in quattro aree funzionali per restare semplice, scalabile e allineato a un workflow open-source. ogni voce ha un suo perimetro chiaro.</p>
+          <div class="tile-grid">
+            <article class="tile">
+              <div class="tile-num">a.01</div>
+              <h3>Archivio</h3>
+              <p>raccolta strutturata con pagine per generazione, timeline, schede modello e riferimenti tecnici.</p>
+              ${tags(["markdown", "versionamento", "ricerca"])}
+            </article>
+            <article class="tile">
+              <div class="tile-num">a.02</div>
+              <h3>Diario</h3>
+              <p>aggiornamenti del progetto, note editoriali e changelog narrativo, in ordine cronologico inverso.</p>
+              ${tags(["post", "tag", "rss-ready"])}
+            </article>
+            <article class="tile">
+              <div class="tile-num">a.03</div>
+              <h3>Forum</h3>
+              <p>discussioni della community su canali esterni dedicati, senza appesantire il core del sito.</p>
+              ${tags(["discussions", "moderazione", "q&a"])}
+            </article>
+            <article class="tile">
+              <div class="tile-num">a.04</div>
+              <h3>Contributi</h3>
+              <p>processo collaborativo in stile open-source con pull request, revisione e deploy continuo.</p>
+              ${tags(["pull request", "ci/cd", "trasparenza"])}
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Architettura</span>
-          <h2>Sezioni principali del progetto</h2>
-          <p>
-            Il dominio e separato in quattro aree funzionali per mantenere il sistema semplice,
-            scalabile e allineato a un workflow open-source.
-          </p>
-        </div>
-        ${renderCardGrid([
-          {
-            title: "Wiki",
-            description: "Archivio strutturato con pagine Xbox, timeline e riferimenti tecnici.",
-            tags: ["Markdown", "Versionamento", "Ricerca"]
-          },
-          {
-            title: "Blog",
-            description: "Aggiornamenti del progetto, note editoriali e changelog narrativo.",
-            tags: ["Post", "Tag", "RSS-ready"]
-          },
-          {
-            title: "Forum",
-            description: "Discussioni community su canali dedicati senza complicare il core del sito.",
-            tags: ["Discussions", "Moderazione", "Q&A"]
-          },
-          {
-            title: "Contributi",
-            description: "Processo collaborativo in stile GitHub con PR, review e deploy continuo.",
-            tags: ["Pull Request", "CI/CD", "Trasparenza"]
-          }
-        ])}
-      </div>
-    </section>
+    ${ruleRow("§ 03 — roadmap mvp", "5 step operativi")}
 
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Roadmap MVP</span>
-          <h2>Da repository pubblico a rilascio continuo</h2>
-          <p>
-            Questi passaggi trasformano l'archivio in piattaforma dinamica mantenendo costi e complessita contenuti.
-          </p>
+      <div class="container split">
+        <div>
+          <span class="col-label"><span class="marker"></span>roadmap</span>
         </div>
-        ${renderTimeline([
-          {
-            date: "Step 1",
-            title: "Repository unico",
-            description: "Wiki, blog e codice UI nello stesso progetto per workflow lineare."
-          },
-          {
-            date: "Step 2",
-            title: "Routing SPA",
-            description: "Un solo index.html con route hash-based e rendering dinamico dei contenuti."
-          },
-          {
-            date: "Step 3",
-            title: "Discussioni esterne",
-            description: "Forum separato via GitHub Discussions o Discourse per evitare backend custom."
-          },
-          {
-            date: "Step 4",
-            title: "Contributi guidati",
-            description: "Edit, PR, review e merge con regole editoriali condivise."
-          },
-          {
-            date: "Step 5",
-            title: "Deploy automatico",
-            description: "Pubblicazione immediata ad ogni merge sul branch principale."
-          }
-        ])}
+        <div>
+          <h2>da repository pubblico a <em>rilascio</em> continuo.</h2>
+          <p class="lede">i passaggi che trasformano l'archivio in piattaforma dinamica mantenendo costi, dipendenze e complessità contenuti al minimo.</p>
+          <div class="tl">
+            ${[
+              { n: "01", date: "step.01", t: "Repository unico", d: "wiki, diario e codice ui nello stesso repository per workflow lineare e diff leggibili." },
+              { n: "02", date: "step.02", t: "Routing spa", d: "un solo entrypoint html con route hash-based e rendering dinamico dei contenuti, zero framework." },
+              { n: "03", date: "step.03", t: "Discussioni esterne", d: "forum delegato a strumenti dedicati per evitare backend custom e garantire moderazione matura." },
+              { n: "04", date: "step.04", t: "Contributi guidati", d: "edit, pr, review e merge regolati da linee guida editoriali condivise e trasparenti." },
+              { n: "05", date: "step.05", t: "Deploy automatico", d: "pubblicazione immediata ad ogni merge sul branch principale tramite static cdn." }
+            ].map(it => `
+              <div class="tl-row">
+                <div class="tl-num">${it.n}</div>
+                <div class="tl-date">${it.date}</div>
+                <div class="tl-title">${it.t}</div>
+                <div class="tl-desc">${it.d}</div>
+              </div>`).join("")}
+          </div>
+        </div>
       </div>
     </section>
   `;
 }
 
+// ---------- wiki ----------
 function renderWiki(slug) {
-  const page = wikiPages[slug];
+  const p = wikiPages[slug];
+  if (!p) return renderNotFound();
 
-  if (!page) {
-    return renderNotFound();
-  }
+  const idx = wikiOrder.indexOf(slug);
+  const next = wikiOrder[(idx + 1) % wikiOrder.length];
+  const nextNav = wikiPages[next].nav;
+  const prev = wikiOrder[(idx - 1 + wikiOrder.length) % wikiOrder.length];
+  const prevNav = wikiPages[prev].nav;
 
-  const currentIndex = wikiOrder.indexOf(slug);
-  const nextSlug = wikiOrder[(currentIndex + 1) % wikiOrder.length];
-
-  const comparisonSection = page.comparison
-    ? `
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="highlight">Confronto</span>
-            <h2>Series X e Series S</h2>
-            <p>Due target differenti con base architetturale condivisa.</p>
-          </div>
-          <div class="model-section">
-            ${page.comparison
-              .map(
-                (model) => `
-                  <div class="model-highlight">
-                    <div>
-                      <h3 class="highlight">${model.label}</h3>
-                      <h2>${model.title}</h2>
-                      <p>${model.description}</p>
-                    </div>
-                    <div class="specs">
-                      <ul class="spec-list">
-                        ${model.specs.map((spec) => `<li><span>${spec.key}</span>${spec.value}</li>`).join("")}
-                      </ul>
-                    </div>
-                  </div>
-                `
-              )
-              .join("")}
+  const compareSection = p.compare ? `
+    ${ruleRow("§ 03 — confronto modelli", "due target, base condivisa")}
+    <section class="section">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>confronto</span></div>
+        <div>
+          <h2>due modelli, <em>un'</em>architettura.</h2>
+          <p class="lede">la generazione corrente si articola su due hardware complementari: target visivo e di prezzo differenti, base architetturale comune.</p>
+          <div class="compare">
+            ${p.compare.map(c => `
+              <div class="compare-cell">
+                <div class="cell-label">${c.label}</div>
+                <h3>${c.title} <em>${c.em}</em></h3>
+                <p class="cell-desc">${c.desc}</p>
+                <div class="cell-specs">
+                  <ul>
+                    ${c.specs.map(s => `<li><span>${s.k}</span><span>${s.v}</span></li>`).join("")}
+                  </ul>
+                </div>
+              </div>
+            `).join("")}
           </div>
         </div>
-      </section>
-    `
-    : "";
-
-  const extraSection = page.extraCards
-    ? `
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="highlight">Approfondimento</span>
-            <h2>${page.extraTitle}</h2>
-            <p>${page.extraDescription}</p>
-          </div>
-          ${renderCardGrid(page.extraCards)}
-        </div>
-      </section>
-    `
-    : "";
+      </div>
+    </section>
+  ` : "";
 
   return `
-    <section class="hero">
+    <section class="wiki-hero">
       <div class="container">
-        <div class="hero-text">
-          <span class="highlight">${page.heroLabel}</span>
-          <h1>${page.title}</h1>
-          <p>${page.intro}</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#/contributi" data-route="contributi">Contribuisci alla Wiki</a>
-            <a class="button secondary" href="#/wiki/${nextSlug}" data-route="wiki/${nextSlug}">Prossima: ${wikiPages[nextSlug].navLabel}</a>
+        <div>
+          <div class="meta-line">
+            <span>archivio · ${p.num}</span>
+            <span>${p.year}</span>
+            <span>${p.label}</span>
+          </div>
+          <h1>${p.title}<br><em>${p.em}</em></h1>
+          <p class="intro">${p.intro}</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#/contributi" data-route="contributi">contribuisci alla scheda <span class="arrow">→</span></a>
+            <a class="btn" href="#/wiki/${next}" data-route="wiki/${next}">${nextNav}</a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="callout">
-            <h3>${page.callout.title}</h3>
-            <p>${page.callout.description}</p>
-            <a class="button secondary" href="${page.callout.href}" target="_blank" rel="noreferrer">${page.callout.label}</a>
+        <aside class="spec-card">
+          <div class="spec-num">fig.01 · scheda tecnica</div>
+          <div class="placeholder"><span class="placeholder-label">${p.nav.toLowerCase().replace(/\s/g, "-")}.render</span></div>
+          <div class="spec-rows">
+            ${p.specs.map(s => `
+              <div class="spec-row">
+                <span>${s.k}</span><span>${s.v}</span>
+              </div>
+            `).join("")}
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    ${ruleRow(`§ 01 — timeline · ${p.nav.toLowerCase()}`, "tappe principali")}
+
+    <section class="section">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>cronologia</span></div>
+        <div>
+          <h2>tappe della <em>generazione</em>.</h2>
+          <p class="lede">eventi principali del ciclo vitale, dall'annuncio alle revisioni finali.</p>
+          <div class="tl">
+            ${p.timeline.map((it, i) => `
+              <div class="tl-row">
+                <div class="tl-num">${pad(i+1)}</div>
+                <div class="tl-date">${it.date}</div>
+                <div class="tl-title">${it.title}</div>
+                <div class="tl-desc">${it.desc}</div>
+              </div>`).join("")}
           </div>
         </div>
       </div>
     </section>
 
+    ${ruleRow("§ 02 — modelli e revisioni", "varianti hardware")}
+
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Timeline</span>
-          <h2>${page.timelineTitle}</h2>
-          <p>${page.timelineDescription}</p>
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>modelli</span></div>
+        <div>
+          <h2>varianti <em>hardware</em>.</h2>
+          <p class="lede">le edizioni che hanno scandito il ciclo vitale della generazione.</p>
+          <div class="models-grid">
+            ${p.models.map((m, i) => `
+              <article class="model">
+                <div class="model-num">m.${pad(i+1)}</div>
+                <div class="model-ph"></div>
+                <h3>${m.name}</h3>
+                <p>${m.desc}</p>
+                ${tags(m.tags)}
+              </article>
+            `).join("")}
+          </div>
         </div>
-        ${renderTimeline(page.timeline)}
       </div>
     </section>
 
+    ${compareSection}
+
+    ${ruleRow(`← ${prevNav}`, `${nextNav} →`)}
+
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Sotto-modelli</span>
-          <h2>${page.modelsTitle}</h2>
-          <p>${page.modelsDescription}</p>
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>navigazione</span></div>
+        <div>
+          <div class="btn-row" style="margin-top:0;">
+            <a class="btn" href="#/wiki/${prev}" data-route="wiki/${prev}"><span class="arrow">←</span> ${prevNav}</a>
+            <a class="btn primary" href="#/wiki/${next}" data-route="wiki/${next}">${nextNav} <span class="arrow">→</span></a>
+          </div>
         </div>
-        ${renderCardGrid(page.models)}
       </div>
     </section>
-
-    ${comparisonSection}
-    ${extraSection}
   `;
 }
 
+// ---------- blog ----------
 function renderBlog() {
   return `
-    <section class="hero">
+    <section class="wiki-hero">
       <div class="container">
-        <div class="hero-text">
-          <span class="highlight">Blog</span>
-          <h1>Aggiornamenti del progetto</h1>
-          <p>
-            Diario tecnico-editoriale di Project Box: decisioni architetturali, evoluzione del design
-            e milestone della piattaforma.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#/wiki/xbox" data-route="wiki/xbox">Vai alla Wiki</a>
-            <a class="button secondary" href="#/contributi" data-route="contributi">Invia un contributo</a>
+        <div>
+          <div class="meta-line">
+            <span>diario · 03</span>
+            <span>note editoriali</span>
+            <span>${blogPosts.length} post</span>
+          </div>
+          <h1>note di<br><em>cantiere</em>.</h1>
+          <p class="intro">diario tecnico-editoriale del progetto: decisioni di architettura, evoluzione del design, milestone della piattaforma. ogni nota può essere discussa nel forum o migliorata via pull request.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#/wiki/xbox" data-route="wiki/xbox">apri archivio <span class="arrow">→</span></a>
+            <a class="btn" href="#/contributi" data-route="contributi">invia un contributo</a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="callout">
-            <h3>Workflow unificato</h3>
-            <p>
-              Wiki e blog condividono lo stesso repository per ridurre attrito operativo e mantenere coerenza.
-            </p>
-            <a class="button secondary" href="#/home" data-route="home">Torna alla panoramica</a>
+        <aside class="spec-card">
+          <div class="spec-num">fig.01 · indice diario</div>
+          <div class="placeholder"><span class="placeholder-label">diario.cover.render</span></div>
+          <div class="spec-rows">
+            <div class="spec-row"><span>post totali</span><span>${blogPosts.length}</span></div>
+            <div class="spec-row"><span>aggiornato</span><span>24.02.2026</span></div>
+            <div class="spec-row"><span>cadenza</span><span>quindicinale</span></div>
+            <div class="spec-row"><span>formato</span><span>markdown</span></div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section">
+    ${ruleRow("§ 01 — pubblicazioni recenti", `${blogPosts.length} note · ordinate dalla più recente`)}
+
+    <section class="section" style="padding-top: 32px;">
       <div class="container">
-        <div class="section-header">
-          <span class="highlight">Post recenti</span>
-          <h2>Ultime pubblicazioni</h2>
-          <p>
-            Ogni articolo nasce come aggiornamento tracciabile e puo essere discusso nel forum o migliorato via PR.
-          </p>
+        <div class="posts">
+          ${blogPosts.map(p => `
+            <article class="post">
+              <div class="post-num">${p.num}</div>
+              <div class="post-date">${p.date}</div>
+              <div class="post-body">
+                <h3>${p.title}</h3>
+                <p>${p.excerpt}</p>
+              </div>
+              <div class="post-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+            </article>
+          `).join("")}
         </div>
-        ${renderCardGrid(blogPosts)}
       </div>
     </section>
   `;
 }
 
+// ---------- forum ----------
 function renderForum() {
   return `
-    <section class="hero">
+    <section class="wiki-hero">
       <div class="container">
-        <div class="hero-text">
-          <span class="highlight">Forum</span>
-          <h1>Discussioni separate dal core del sito</h1>
-          <p>
-            Le conversazioni vivono su strumenti dedicati: in questo modo il sito resta leggero,
-            mentre la community ottiene funzionalita mature di moderazione e notifiche.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://github.com/features/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a>
-            <a class="button secondary" href="https://www.discourse.org/" target="_blank" rel="noreferrer">Discourse</a>
+        <div>
+          <div class="meta-line">
+            <span>forum · 04</span>
+            <span>community</span>
+            <span>2 canali</span>
+          </div>
+          <h1>discussioni<br><em>separate</em>.</h1>
+          <p class="intro">le conversazioni vivono su strumenti dedicati: il sito resta leggero, mentre la community ottiene funzionalità mature di moderazione e notifiche.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="https://github.com/features/discussions" target="_blank" rel="noreferrer">apri canale principale <span class="arrow">→</span></a>
+            <a class="btn" href="#/contributi" data-route="contributi">processo contributi</a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="callout">
-            <h3>Scelta suggerita MVP</h3>
-            <p>
-              Per partire rapidamente: GitHub Discussions, poi migrazione a Discourse solo se cresce il volume.
-            </p>
-            <a class="button secondary" href="#/contributi" data-route="contributi">Processo contributi</a>
+        <aside class="spec-card">
+          <div class="spec-num">fig.01 · scelta mvp</div>
+          <div class="placeholder"><span class="placeholder-label">forum.cover.render</span></div>
+          <div class="spec-rows">
+            <div class="spec-row"><span>backend</span><span>nessuno</span></div>
+            <div class="spec-row"><span>moderazione</span><span>delegata</span></div>
+            <div class="spec-row"><span>auth</span><span>esterna</span></div>
+            <div class="spec-row"><span>scalabilità</span><span>alta</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    ${ruleRow("§ 01 — canali disponibili", "due opzioni · scegli in base al volume")}
+
+    <section class="section">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>canali</span></div>
+        <div>
+          <h2>due strade per <em>discutere</em>.</h2>
+          <p class="lede">entrambe sono compatibili con l'architettura proposta. cambia solo il livello di controllo, la profondità degli strumenti, l'effort iniziale.</p>
+          <div class="forum-channels">
+            ${forumChannels.map(c => `
+              <article class="channel">
+                <div class="channel-num">${c.num} / canale</div>
+                <h3>${c.title}</h3>
+                <p>${c.desc}</p>
+                <div class="channel-foot">
+                  ${tags(c.tags)}
+                  <a class="btn" href="${c.href}" target="_blank" rel="noreferrer">${c.cta} <span class="arrow">→</span></a>
+                </div>
+              </article>
+            `).join("")}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Canali</span>
-          <h2>Opzioni di implementazione forum</h2>
-          <p>
-            Entrambe le soluzioni sono compatibili con l'architettura proposta: cambia solo il livello di controllo.
-          </p>
-        </div>
-        <div class="card-grid">
-          ${forumChannels
-            .map(
-              (channel) => `
-                <article class="card">
-                  <h3>${channel.title}</h3>
-                  <p>${channel.description}</p>
-                  ${renderTagList(channel.tags)}
-                  <a class="button secondary" href="${channel.ctaHref}" target="_blank" rel="noreferrer">${channel.ctaLabel}</a>
-                </article>
-              `
-            )
-            .join("")}
-        </div>
-      </div>
-    </section>
+    ${ruleRow("§ 02 — linee guida operative", "regole minime di moderazione")}
 
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Linee guida</span>
-          <h2>Regole operative per la community</h2>
-          <p>
-            Un framework minimo di moderazione mantiene le discussioni utili e riusabili in wiki/blog.
-          </p>
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>linee guida</span></div>
+        <div>
+          <h2>quattro regole, <em>nessun</em> dramma.</h2>
+          <p class="lede">un framework minimo di moderazione mantiene le discussioni utili, riusabili e vicine al lavoro editoriale.</p>
+          <div class="tl">
+            ${forumGuidelines.map(g => `
+              <div class="tl-row">
+                <div class="tl-num">${g.num}</div>
+                <div class="tl-date">regola</div>
+                <div class="tl-title">${g.title}</div>
+                <div class="tl-desc">${g.desc}</div>
+              </div>
+            `).join("")}
+          </div>
         </div>
-        ${renderTimeline(forumGuidelines)}
       </div>
     </section>
   `;
 }
 
+// ---------- contributi ----------
 function renderContributi() {
   return `
-    <section class="hero">
+    <section class="wiki-hero">
       <div class="container">
-        <div class="hero-text">
-          <span class="highlight">Contributi</span>
-          <h1>Aggiunte e aggiornamenti in stile GitHub</h1>
-          <p>
-            L'editing e aperto: modifiche tracciate, revisione collaborativa e deploy automatico dopo merge.
-            Nessun pannello admin custom, tutto passa da workflow Git.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#/wiki/xbox" data-route="wiki/xbox">Modifica una pagina Wiki</a>
-            <a class="button secondary" href="#/blog" data-route="blog">Aggiorna il Blog</a>
+        <div>
+          <div class="meta-line">
+            <span>contributi · 05</span>
+            <span>workflow git</span>
+            <span>6 step</span>
+          </div>
+          <h1>aggiornamenti<br><em>aperti</em>.</h1>
+          <p class="intro">l'editing è aperto: modifiche tracciate, revisione collaborativa, deploy automatico dopo merge. nessun pannello custom, tutto passa da workflow git pubblici.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#/wiki/xbox" data-route="wiki/xbox">modifica una scheda <span class="arrow">→</span></a>
+            <a class="btn" href="#/blog" data-route="blog">aggiorna il diario</a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="callout">
-            <h3>Obiettivo</h3>
-            <p>
-              Rendere il contributo semplice per i fan mantenendo qualita editoriale e consistenza tecnica.
-            </p>
-            <a class="button secondary" href="#/home" data-route="home">Panoramica piattaforma</a>
+        <aside class="spec-card">
+          <div class="spec-num">fig.01 · pipeline</div>
+          <div class="placeholder"><span class="placeholder-label">workflow.cover.render</span></div>
+          <div class="spec-rows">
+            <div class="spec-row"><span>step</span><span>06</span></div>
+            <div class="spec-row"><span>review</span><span>maintainer + ci</span></div>
+            <div class="spec-row"><span>tempo medio</span><span>~ 48 h</span></div>
+            <div class="spec-row"><span>deploy</span><span>automatico</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    ${ruleRow("§ 01 — pipeline contributiva", "sei passaggi lineari")}
+
+    <section class="section">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>workflow</span></div>
+        <div>
+          <h2>dal fork al <em>deploy</em>, in chiaro.</h2>
+          <p class="lede">sei passaggi lineari, allineati al modello open-source professionale. nessun passaggio nascosto, ogni stato è verificabile.</p>
+          <div class="steps">
+            ${contributionSteps.map(s => `
+              <article class="step">
+                <div class="step-num">${s.num}</div>
+                <h4>${s.title}</h4>
+                <p>${s.desc}</p>
+              </article>
+            `).join("")}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Workflow</span>
-          <h2>Pipeline contributiva</h2>
-          <p>
-            Sei passaggi lineari, allineati al modello open-source professionale.
-          </p>
-        </div>
-        <div class="card-grid">
-          ${contributionSteps
-            .map(
-              (step, index) => `
-                <article class="card">
-                  <h3>${index + 1}. ${step.title}</h3>
-                  <p>${step.description}</p>
-                </article>
-              `
-            )
-            .join("")}
-        </div>
-      </div>
-    </section>
+    ${ruleRow("§ 02 — stack funzionale", "matrice operativa del progetto")}
 
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="highlight">Stack tecnico</span>
-          <h2>Matrice funzionale del progetto</h2>
-          <p>
-            Riepilogo operativo delle tecnologie suggerite dal briefing per la versione MVP.
-          </p>
-        </div>
-        <div class="table-wrap">
-          <table class="feature-table">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>stack</span></div>
+        <div>
+          <h2>tecnologie <em>essenziali</em>.</h2>
+          <p class="lede">riepilogo operativo delle scelte tecniche per la versione mvp del progetto. priorità a strumenti standard, statici, sostenibili.</p>
+          <table class="stack-table">
             <thead>
-              <tr>
-                <th>Funzione</th>
-                <th>Obiettivo</th>
-                <th>Tecnologia</th>
-              </tr>
+              <tr><th>funzione</th><th>obiettivo</th><th>tecnologia</th></tr>
             </thead>
             <tbody>
-              ${stackRows
-                .map(
-                  (row) => `
-                    <tr>
-                      <td>${row[0]}</td>
-                      <td>${row[1]}</td>
-                      <td>${row[2]}</td>
-                    </tr>
-                  `
-                )
-                .join("")}
+              ${stackRows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}
             </tbody>
           </table>
         </div>
@@ -947,83 +523,65 @@ function renderContributi() {
 
 function renderNotFound() {
   return `
-    <section class="section">
+    <section class="wiki-hero">
       <div class="container">
-        <div class="section-header">
-          <span class="highlight">404</span>
-          <h2>Sezione non trovata</h2>
-          <p>La route richiesta non esiste. Usa la navigazione principale per continuare.</p>
+        <div>
+          <div class="meta-line"><span>errore · 404</span><span>route mancante</span></div>
+          <h1>pagina<br><em>introvabile</em>.</h1>
+          <p class="intro">la route richiesta non esiste. usa la navigazione principale per continuare.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#/home" data-route="home">torna all'indice <span class="arrow">→</span></a>
+          </div>
         </div>
-        <a class="button primary" href="#/home" data-route="home">Torna alla Home</a>
       </div>
     </section>
   `;
 }
 
+// ---------- routing ----------
 function closeWikiMenu() {
-  if (wikiGroup) {
-    wikiGroup.removeAttribute("open");
-  }
+  if (wikiGroup) wikiGroup.removeAttribute("open");
 }
 
 function updateActiveState(route) {
-  const elements = document.querySelectorAll("[data-route]");
-
-  elements.forEach((element) => {
-    const targetRoute = element.dataset.route;
-    const isWikiRoot = targetRoute === "wiki" && route.startsWith("wiki/");
-    const isActive = targetRoute === route || isWikiRoot;
-
-    element.classList.toggle("active", isActive);
-
-    if (element.tagName === "A") {
-      if (isActive) {
-        element.setAttribute("aria-current", "page");
-      } else {
-        element.removeAttribute("aria-current");
-      }
+  document.querySelectorAll("[data-route]").forEach(el => {
+    const target = el.dataset.route;
+    const isWikiRoot = target === "wiki" && route.startsWith("wiki/");
+    const isActive = target === route || isWikiRoot;
+    el.classList.toggle("active", isActive);
+    if (el.tagName === "A") {
+      if (isActive) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
     }
   });
 }
 
 function renderRoute() {
-  const rawRoute = getRouteFromHash();
-  const route = normalizeRoute(rawRoute);
-
-  if (rawRoute !== route) {
+  const raw = getRouteFromHash();
+  const route = normalizeRoute(raw);
+  if (raw !== route) {
     window.location.hash = `#/${route}`;
     return;
   }
-
-  const template = routes[route] || renderNotFound;
-  appContainer.innerHTML = template();
-  document.title = titles[route] || "Project Box";
+  const tpl = routes[route] || renderNotFound;
+  appContainer.innerHTML = tpl();
+  document.title = titles[route] || "project box";
+  appContainer.setAttribute("data-screen-label", labels[route] || route);
   updateActiveState(route);
   closeWikiMenu();
   window.scrollTo({ top: 0, behavior: "auto" });
 }
 
 function initNavigationBehavior() {
-  if (!wikiGroup) {
-    return;
-  }
-
-  wikiGroup.addEventListener("click", (event) => {
-    if (event.target.closest(".wiki-menu a")) {
-      closeWikiMenu();
-    }
+  if (!wikiGroup) return;
+  wikiGroup.addEventListener("click", (e) => {
+    if (e.target.closest(".wiki-menu a")) closeWikiMenu();
   });
-
-  document.addEventListener("click", (event) => {
-    if (!wikiGroup.contains(event.target)) {
-      closeWikiMenu();
-    }
+  document.addEventListener("click", (e) => {
+    if (!wikiGroup.contains(e.target)) closeWikiMenu();
   });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeWikiMenu();
-    }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeWikiMenu();
   });
 }
 
@@ -1031,11 +589,9 @@ window.addEventListener("hashchange", renderRoute);
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavigationBehavior();
-
   if (!window.location.hash) {
     window.location.hash = "#/home";
     return;
   }
-
   renderRoute();
 });
