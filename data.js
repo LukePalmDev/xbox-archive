@@ -15,51 +15,86 @@ const wikiPages = {
   "xbox": {
     nav: "Generazione I", num: "01", year: "2001", label: "prima generazione",
     title: "Generazione", em: "I",
-    intro: "La prima console domestica del produttore introduce un hardware ispirato all'architettura PC, una identità visiva netta, e le fondamenta del gioco online persistente.",
+    intro: "La prima console Microsoft nasce dalla volontà di portare l'architettura PC nel salotto, rispondere alla minaccia PlayStation 2 e fondare un'infrastruttura online persistente. Hardware potente, HDD integrato ed Ethernet nativa anticipano standard che diventeranno industria.",
     specs: [
-      { k: "anno", v: "2001 — 2008" },
-      { k: "cpu", v: "Intel Pentium III 733 MHz" },
-      { k: "gpu", v: "NV2A custom" },
-      { k: "ram", v: "64 MB DDR" },
-      { k: "storage", v: "HDD 8 GB" },
-      { k: "uscita", v: "composite / component" }
+      { k: "anno", v: "2001 — 2006 (prod.) · 2010 (Live)" },
+      { k: "cpu", v: "Intel Pentium III custom 733 MHz, 32-bit" },
+      { k: "gpu", v: "Nvidia NV2A (GeForce 3) 233 MHz · DX8" },
+      { k: "ram", v: "64 MB DDR SDRAM unificata · 6.4 GB/s" },
+      { k: "storage", v: "HDD interno 8–10 GB + Memory Unit 8 MB" },
+      { k: "ottico", v: "DVD-ROM (giochi + DVD video con kit)" },
+      { k: "rete", v: "Ethernet 10/100 integrata" },
+      { k: "uscita video", v: "480i/p · 720p/1080i (component, titoli selezionati)" },
+      { k: "dimensioni", v: "320 × 259 × 91 mm · ~4 kg" },
+      { k: "prezzo lancio", v: "299 USD · 34.800 JPY · ~479 EUR" }
     ],
     timeline: [
-      { date: "01.2001", title: "Annuncio al CES", desc: "Strategia orientata alle performance e all'apertura verso lo sviluppo PC-like." },
-      { date: "11.2001", title: "Lancio nordamericano", desc: "Debutto con titolo di punta first-party e supporto multiplayer locale esteso." },
-      { date: "11.2002", title: "Servizio online unificato", desc: "Matchmaking, chat vocale e identità persistente del giocatore tramite servizio dedicato." },
-      { date: "2004", title: "Revisione board 1.6", desc: "Aggiornamenti termici e di stabilità prima del passaggio alla generazione successiva." }
+      { date: "1998–1999", title: "Concezione interna", desc: "I \"Four Musketeers\" del team DirectX — Bachus, Blackley, Hase, Berkes — propongono una console PC-like per competere con PS2." },
+      { date: "03.2000", title: "Microsoft Games Division", desc: "Microsoft formalizza la divisione gaming e porta il team a circa 1000 persone." },
+      { date: "01.2001", title: "Annuncio al CES", desc: "Bill Gates e The Rock presentano Xbox al Consumer Electronics Show, enfatizzando potenza, DirectX e online." },
+      { date: "15.11.2001", title: "Lancio nordamericano", desc: "Debutto con Halo: Combat Evolved, Project Gotham Racing e circa 20 titoli. Prezzo: 299 USD." },
+      { date: "22.02.2002", title: "Lancio in Giappone", desc: "12 titoli disponibili tra cui Genma Onimusha, Dead or Alive 3 e Jet Set Radio Future. Ricezione tiepida." },
+      { date: "14.03.2002", title: "Lancio in Europa", desc: "Line-up con Halo, Dead or Alive 3, Project Gotham Racing e titoli sportivi. Prezzo iniziale ~479 EUR." },
+      { date: "15.11.2002", title: "Lancio Xbox Live", desc: "Starter Kit a 49,95 USD: headset, demo disc e un anno di abbonamento. Matchmaking, gamertag e voice chat." },
+      { date: "2002", title: "Controller S", desc: "Il pad più compatto sostituisce \"The Duke\" come standard incluso nei mercati occidentali." },
+      { date: "2004", title: "Revisione 1.6 (Tuscany)", desc: "Ultimo aggiornamento motherboard: nuovo video encoder, RAM Hynix, ulteriori ottimizzazioni costi." },
+      { date: "2004", title: "Halo Limited Edition", desc: "Console verde traslucida in bundle con Controller S abbinato e copia di Halo: Combat Evolved." },
+      { date: "2004–2005", title: "Tagli di prezzo e Halo 2", desc: "Prezzo ridotto a 179,99 USD in Nord America. Halo 2 diventa driver principale di Xbox Live." },
+      { date: "2005–2006", title: "Fine produzione", desc: "Dismissione graduale in concomitanza col lancio di Xbox 360. Vendite finali da esaurimento scorte." },
+      { date: "15.04.2010", title: "Chiusura Xbox Live originale", desc: "Microsoft dismette il supporto online per console e giochi Xbox v1. Le modalità offline restano attive." }
     ],
     models: [
-      { name: "Launch Edition", desc: "Versione originale con controller di prima generazione e HDD integrato.", tags: ["2001", "duke", "8 gb"] },
-      { name: "Controller S Bundle", desc: "Pad più compatto introdotto gradualmente in Europa e Giappone.", tags: ["2002", "ergonomia", "retail"] },
-      { name: "Revisione 1.6", desc: "Aggiornamento motherboard con miglioramenti termici e produttivi.", tags: ["2004", "board", "stabilità"] },
-      { name: "Edizione Cristallo", desc: "Variante trasparente molto apprezzata dai collezionisti.", tags: ["limited", "design", "europa"] }
+      { name: "Launch Edition — \"The Duke\"", desc: "Modello originale con il controller voluminoso di prima generazione. HDD 8 GB, Ethernet integrata, quattro porte controller.", tags: ["2001", "duke", "rev. 1.0–1.1"] },
+      { name: "Controller S Bundle", desc: "Il pad più compatto, più ergonomico, diventa standard nei mercati occidentali. Revisioni 1.2–1.5 (Xblade).", tags: ["2002", "controller s", "rev. 1.2–1.5"] },
+      { name: "Revisione 1.6 — Tuscany", desc: "PCB X01063-121: nuovo video encoder, aggiornamenti RAM e ulteriore riduzione costi produttivi.", tags: ["2004", "rev. 1.6", "cost-down"] },
+      { name: "Halo Limited Edition", desc: "Scocca verde traslucida, Controller S abbinato, copia di Halo: Combat Evolved inclusa. Tra le più ambite dai collezionisti.", tags: ["2004", "limited", "halo"] },
+      { name: "Ice Blue Halo 2 Edition", desc: "Scocca blu traslucida distribuita in Canada e alcune regioni asiatiche con Controller S verde e copia di Halo 2.", tags: ["2005", "limited", "halo 2"] },
+      { name: "Mountain Dew Edition", desc: "Scocca verde lime ottenibile solo con punti fedeltà Mountain Dew USA. Tiratura stimata ~5.000 unità.", tags: ["limited", "promo", "~5.000 unità"] }
     ]
   },
   "xbox-360": {
     nav: "Generazione II", num: "02", year: "2005", label: "alta definizione",
     title: "Generazione", em: "II",
-    intro: "La seconda generazione porta HD, marketplace digitale e servizi online al centro dell'esperienza domestica, con un ciclo vitale tra i più longevi della categoria.",
+    intro: "Xbox 360 definisce il modello moderno di console online: achievements, party chat, marketplace digitale e un catalogo da ~84 milioni di unità vendute. Arriva sul mercato con un anno di vantaggio su PS3, portando l'HD gaming di massa nel salotto occidentale.",
     specs: [
-      { k: "anno", v: "2005 — 2016" },
-      { k: "cpu", v: "IBM Xenon 3.2 GHz tri-core" },
-      { k: "gpu", v: "ATI Xenos 500 MHz" },
-      { k: "ram", v: "512 MB GDDR3" },
-      { k: "storage", v: "20 — 250 GB HDD" },
-      { k: "uscita", v: "hdmi / component" }
+      { k: "anno", v: "2005 — 2016 (prod.) · 2024 (marketplace)" },
+      { k: "cpu", v: "IBM PowerPC Xenon tri-core 3,2 GHz · 6 thread" },
+      { k: "gpu", v: "ATI Xenos 500 MHz · 10 MB eDRAM · 240 GFLOPS" },
+      { k: "ram", v: "512 MB GDDR3 unificata · 22,4 GB/s" },
+      { k: "storage", v: "HDD 20–500 GB (o 4 GB flash su modelli S/E)" },
+      { k: "ottico", v: "DVD 12× dual layer (XGD2/XGD3) + HD DVD ext." },
+      { k: "rete", v: "Ethernet 10/100 · Wi-Fi N integrato (S/E)" },
+      { k: "uscita video", v: "480p · 720p · 1080i · 1080p · HDMI dal 2007" },
+      { k: "audio", v: "Dolby Digital 5.1 obbligatorio per tutti i giochi" },
+      { k: "prezzo lancio", v: "Core 299,99 USD · Premium 399,99 USD · JP 37.900 JPY" }
     ],
     timeline: [
-      { date: "11.2005", title: "Core e Premium", desc: "Lancio con due SKU e focus su gioco online e servizi digitali." },
-      { date: "2007", title: "Elite e Jasper", desc: "Versioni aggiornate con consumi ridotti e migliore gestione termica." },
-      { date: "06.2010", title: "Revisione Slim", desc: "Design rinnovato, Wi-Fi integrato e supporto periferica motion." },
-      { date: "06.2013", title: "Refresh finale", desc: "Ultima revisione estetica prima della transizione completa alla generazione successiva." }
+      { date: "2003", title: "Progetto Xenon", desc: "Avvio dello sviluppo con nome in codice Xenon. J Allard guida la piattaforma; IBM e ATI firmano accordi per CPU e GPU." },
+      { date: "08.2003", title: "Accordo ATI per Xenos", desc: "ATI sviluppa la GPU Xenos con shader unificati e eDRAM dedicata da 10 MB: una scelta che anticipa l'architettura delle GPU moderne." },
+      { date: "12.05.2005", title: "Reveal MTV", desc: "Presentazione mondiale nel programma TV \"Xbox: The Next Generation Revealed\" su MTV, prima dell'E3 2005." },
+      { date: "05.2005", title: "E3 2005", desc: "Presentazione hardware completa: CPU IBM tri-core 3,2 GHz, GPU ATI Xenos, 512 MB RAM. Epic Games mostra l'impatto del raddoppio RAM su Gears of War." },
+      { date: "22.11.2005", title: "Lancio nordamericano", desc: "Due SKU: Core (299,99 USD, senza HDD) e Premium (399,99 USD, 20 GB). 18 titoli disponibili al day one." },
+      { date: "02.12.2005", title: "Lancio in Europa", desc: "Premium a 399,99 EUR, Core a 299,99 EUR. Il numero di titoli varia rispetto al lancio nordamericano." },
+      { date: "10.12.2005", title: "Lancio in Giappone", desc: "7 titoli disponibili. Le vendite rimarranno contenute: ~1,6 milioni di unità lifetime." },
+      { date: "2007", title: "Red Ring of Death", desc: "Esplode il caso RROD: tassi di guasto elevati nelle prime revisioni per difetti termici su CPU/GPU. Microsoft estende la garanzia a 3 anni con un accantonamento di 1,05 miliardi di dollari." },
+      { date: "2007", title: "Elite e HDMI", desc: "Lancio della revisione Zephyr con HDMI e dell'Elite (120 GB, finitura nera). Falcon introduce la CPU a 65 nm." },
+      { date: "11.2008", title: "New Xbox Experience (NXE)", desc: "Nuova dashboard con Avatar 3D, installazione giochi su HDD e redesign del Marketplace." },
+      { date: "11.2008", title: "Jasper", desc: "CPU e GPU a 65 nm, PSU scende a 150 W: una delle revisioni più affidabili dell'intera famiglia." },
+      { date: "06.2010", title: "Xbox 360 S — Trinity", desc: "SoC XCGPU a 45 nm integra CPU, GPU ed eDRAM. Nuovo case slim, Wi-Fi N integrato, PSU 135 W. Lancio contestuale di Kinect." },
+      { date: "12.2011", title: "Dashboard Metro", desc: "Interfaccia con tile, integrazione Bing, cloud saves, Kinect voice e nuova offerta video/musica (Zune → Xbox Video/Music)." },
+      { date: "06.2013", title: "Xbox 360 E", desc: "Ultimo redesign estetico della 360, ispirato ad Xbox One. Revisione Stingray, PSU 120 W." },
+      { date: "20.04.2016", title: "Fine produzione", desc: "Microsoft annuncia la cessazione delle nuove unità dopo oltre 10 anni. Lo stock esistente continua a essere venduto." },
+      { date: "29.07.2024", title: "Chiusura marketplace", desc: "Il marketplace Xbox 360 cessa la vendita di giochi, DLC e contenuti video. Download di contenuti già acquistati e multiplayer restano attivi." }
     ],
     models: [
-      { name: "Premium", desc: "HDD da 20 GB, controller wireless, uscita component HD.", tags: ["2005", "hd", "online"] },
-      { name: "Elite", desc: "Finitura nera e maggiore capacità storage per utenti hardcore.", tags: ["2007", "120 gb", "black"] },
-      { name: "Slim", desc: "Ridisegno completo della scocca e migliore silenziosità.", tags: ["2010", "wi-fi", "motion"] },
-      { name: "Refresh", desc: "Linea ispirata al successore, ultima versione consumer.", tags: ["2013", "refresh", "finale"] }
+      { name: "Core", desc: "SKU entry-level senza HDD e con controller cablato. Limitato nelle funzionalità avanzate (retrocompatibilità, installazione giochi).", tags: ["2005", "senza hdd", "299 USD"] },
+      { name: "Premium / Pro", desc: "HDD da 20 GB, controller wireless, headset e cavo component HD-AV. Lo SKU principale al lancio.", tags: ["2005", "20 gb", "399 USD"] },
+      { name: "Elite", desc: "Finitura nera con HDD da 120 GB. Prima revisione con capienza storage significativa per utenti core.", tags: ["2007", "120 gb", "nero"] },
+      { name: "Slim — Xbox 360 S (Trinity)", desc: "SoC XCGPU a 45 nm, Wi-Fi N integrato, design slim rinnovato. Tra i modelli più silenziosi e affidabili della generazione.", tags: ["2010", "wi-fi n", "45 nm"] },
+      { name: "Xbox 360 E (Stingray)", desc: "Ultimo form factor, ispirato esteticamente ad Xbox One. Revisione Corona/Stingray a 45 nm, PSU 120 W.", tags: ["2013", "refresh", "ultimo modello"] },
+      { name: "Halo 3 Special Edition", desc: "Console fat verde/oro con serigrafie Spartan, HDD 20 GB, controller wireless abbinato e tema scaricabile.", tags: ["2007", "limited", "halo 3"] },
+      { name: "Modern Warfare 2 Edition", desc: "Console fat grigio scuro con grafiche MW2, HDD 250 GB: prima configurazione retail con tagllio da 250 GB.", tags: ["2009", "limited", "250 gb"] },
+      { name: "Kinect Star Wars Edition", desc: "Console S bianca con livrea R2-D2, controller dorato stile C-3PO, sensore Kinect bianco. Tra le più ricercate dai collezionisti.", tags: ["2012", "limited", "kinect"] }
     ]
   },
   "xbox-one": {
