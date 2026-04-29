@@ -240,7 +240,9 @@ function renderWiki(slug) {
         </div>
         <aside class="spec-card">
           <div class="spec-num">fig.01 · scheda tecnica</div>
-          <div class="placeholder"><span class="placeholder-label">${p.nav.toLowerCase().replace(/\s/g, "-")}.render</span></div>
+          ${p.image
+            ? `<img class="spec-img" src="${p.image}" alt="${p.nav} — render" loading="lazy">`
+            : `<div class="placeholder"><span class="placeholder-label">${p.nav.toLowerCase().replace(/\s/g, "-")}.render</span></div>`}
           <div class="spec-rows">
             ${p.specs.map(s => `
               <div class="spec-row">

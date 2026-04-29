@@ -708,6 +708,14 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 .spec-card .placeholder { aspect-ratio: 5 / 3; }
+.spec-card .spec-img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg);
+  display: block;
+}
 .spec-card .spec-rows {
   border-top: var(--hairline);
 }

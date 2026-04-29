@@ -13,6 +13,7 @@ const generations = [
 
 const wikiPages = {
   "xbox": {
+    image: "images/xbox-original.jpg",
     nav: "Generazione I", num: "01", year: "2001", label: "prima generazione",
     title: "Generazione", em: "I",
     intro: "La prima console Microsoft nasce dalla volontà di portare l'architettura PC nel salotto, rispondere alla minaccia PlayStation 2 e fondare un'infrastruttura online persistente. Hardware potente, HDD integrato ed Ethernet nativa anticipano standard che diventeranno industria.",
@@ -53,6 +54,7 @@ const wikiPages = {
     ]
   },
   "xbox-360": {
+    image: "images/xbox-360.jpg",
     nav: "Generazione II", num: "02", year: "2005", label: "alta definizione",
     title: "Generazione", em: "II",
     intro: "Xbox 360 definisce il modello moderno di console online: achievements, party chat, marketplace digitale e un catalogo da ~84 milioni di unità vendute. Arriva sul mercato con un anno di vantaggio su PS3, portando l'HD gaming di massa nel salotto occidentale.",
@@ -98,53 +100,81 @@ const wikiPages = {
     ]
   },
   "xbox-one": {
+    image: "images/xbox-one.jpg",
     nav: "Generazione III", num: "03", year: "2013", label: "ecosistema unificato",
     title: "Generazione", em: "III",
-    intro: "Una generazione che parte come hub multimediale e si evolve verso prestazioni, compatibilità e servizi in abbonamento.",
+    intro: "Xbox One parte come \"all-in-one entertainment system\" con Kinect obbligatorio e focus TV, poi si riallinea al gaming dopo il backlash del reveal. Game Pass nasce qui. Xbox One X introduce il mid-gen refresh di potenza e il 4K nativo come valore differenziante.",
     specs: [
-      { k: "anno", v: "2013 — 2020" },
-      { k: "cpu", v: "AMD Jaguar 8 core" },
-      { k: "gpu", v: "AMD GCN 1.31 TFLOPS" },
-      { k: "ram", v: "8 GB DDR3 / GDDR5" },
-      { k: "storage", v: "500 GB — 2 TB HDD" },
-      { k: "uscita", v: "hdmi 2.0 / 4K UHD" }
+      { k: "anno", v: "2013 — 2020 (prod.)" },
+      { k: "cpu", v: "AMD Jaguar 8 core x86-64 · 1,75 GHz" },
+      { k: "gpu", v: "AMD GCN 12 CU · 1,31 TFLOPS + 32 MB ESRAM" },
+      { k: "ram", v: "8 GB DDR3 · 68,3 GB/s" },
+      { k: "storage", v: "HDD 500 GB – 1 TB · espandibile via USB 3.0" },
+      { k: "ottico", v: "Blu-ray / DVD (UHD 4K dal modello S)" },
+      { k: "rete", v: "Ethernet GbE · Wi-Fi 802.11n · Wi-Fi Direct" },
+      { k: "uscita video", v: "1080p · 4K upscaling (S) · 4K nativo (X, 6 TFLOPS)" },
+      { k: "hdmi-in", v: "Pass-through decoder TV via OneGuide" },
+      { k: "prezzo lancio", v: "499 USD (con Kinect) · 499 EUR" }
     ],
     timeline: [
-      { date: "11.2013", title: "Lancio originario", desc: "Focus su tv, app e integrazione multimediale nel salotto." },
-      { date: "2014", title: "Cambio di rotta", desc: "Bundle senza periferica motion e update software orientati al gaming puro." },
-      { date: "08.2016", title: "Revisione Slim", desc: "Design compatto con supporto video 4K e HDR su titoli selezionati." },
-      { date: "11.2017", title: "Modello premium", desc: "Hardware con forte incremento di potenza e resa 4K nativa." }
+      { date: "2011–2012", title: "Progetto Durango", desc: "Sviluppo SDK e devkit con nome in codice Durango. La visione include Kinect avanzato, integrazione cloud e sperimentazioni AR (progetto Fortaleza)." },
+      { date: "21.05.2013", title: "Annuncio ufficiale", desc: "Reveal a Redmond con Don Mattrick: focus su TV, controllo vocale Kinect e hub multimediale. Scarso spazio per i giochi." },
+      { date: "06.2013", title: "Polemiche DRM e inversione di rotta", desc: "Dopo il backlash su always-online e limitazioni usato, Microsoft revoca tutte le policy DRM prima del lancio. Sony capitalizza il momento all'E3." },
+      { date: "22.11.2013", title: "Lancio nordamericano ed europeo", desc: "499 USD con Kinect obbligatorio. 1 milione di unità nelle prime 24 ore. Line-up con Forza 5, Ryse, Dead Rising 3, Killer Instinct." },
+      { date: "09.2014", title: "Espansione a 26 nuovi mercati", desc: "Lancio in Giappone, Cina (prima Xbox ufficiale nel paese) e altri mercati europei e asiatici. Bundle senza Kinect introdotti per ridurre il prezzo." },
+      { date: "11.2015", title: "New Xbox One Experience", desc: "Passaggio a base Windows 10, nuova dashboard, Guide laterale, retrocompatibilità Xbox 360 con emulatore Fission: 104 titoli al debutto." },
+      { date: "2016", title: "Xbox One S", desc: "Case 40% più piccolo, alimentatore interno, supporto 4K UHD Blu-ray e HDR10 per i giochi. Parte da 299 USD (500 GB)." },
+      { date: "06.2017", title: "Xbox Game Pass", desc: "Lancio dell'abbonamento con catalogo rotante di titoli scaricabili. Cambio strutturale del modello di business Xbox." },
+      { date: "11.2017", title: "Xbox One X", desc: "\"Console più potente al mondo\" al lancio: GPU 6 TFLOPS, 12 GB GDDR5, 4K nativo, vapor chamber. Prezzo 499 USD." },
+      { date: "2018", title: "Xbox Adaptive Controller", desc: "Controller pensato per l'accessibilità con grandi tasti e porte per dispositivi esterni. Modello poi replicato da altri produttori." },
+      { date: "05.2019", title: "Xbox One S All-Digital", desc: "Primo modello senza lettore ottico, solo digitale. Prezzo 249 USD in bundle con tre giochi digitali." },
+      { date: "Fine 2020", title: "Fine produzione", desc: "Microsoft cessa la produzione di Xbox One X e One S All-Digital prima del lancio di Series X|S. La One S con disco continua fino a fine anno." }
     ],
     models: [
-      { name: "Originale", desc: "Modello di lancio con alimentatore esterno e focus entertainment.", tags: ["2013", "all-in-one"] },
-      { name: "Slim", desc: "Formato ridotto, lettore UHD blu-ray e case bianco opaco.", tags: ["2016", "hdr", "slim"] },
-      { name: "Premium", desc: "La più potente della sua generazione al lancio.", tags: ["2017", "4k", "perf"] },
-      { name: "Edizioni speciali", desc: "Versioni limitate dedicate a franchise specifici.", tags: ["limited", "collector"] }
+      { name: "Xbox One (2013)", desc: "Modello originale con Kinect obbligatorio, alimentatore esterno, GPU 1,31 TFLOPS. Case volumoso in finitura bicolore liquid black.", tags: ["2013", "kinect", "499 USD"] },
+      { name: "Xbox One Elite (2015)", desc: "1 TB SSHD con cache flash per avvii più veloci, controller Elite di fascia alta incluso.", tags: ["2015", "1 TB SSHD", "elite controller"] },
+      { name: "Xbox One S (2016)", desc: "Case 40% più piccolo, PSU interno, 4K UHD Blu-ray, HDR10. Tagli da 500 GB a 2 TB su edizioni limitate. Il modello principale del ciclo.", tags: ["2016", "4K UHD", "299 USD"] },
+      { name: "Xbox One S All-Digital (2019)", desc: "Nessun lettore ottico, solo digitale. 1 TB in bundle con Forza Horizon 3, Sea of Thieves e Minecraft.", tags: ["2019", "digital only", "249 USD"] },
+      { name: "Xbox One X (2017)", desc: "GPU 6 TFLOPS, 12 GB GDDR5, 4K nativo, vapor chamber. La console più potente al lancio nel 2017. Case compatto.", tags: ["2017", "4K nativo", "6 TFLOPS"] },
+      { name: "Cyberpunk 2077 Limited Edition", desc: "Xbox One X con pannelli metallici, incisioni laser e LED fosforescenti. Limitata a ~45.000 unità, molto ricercata dai collezionisti.", tags: ["2020", "limited", "~45.000 unità"] }
     ]
   },
   "xbox-series": {
+    image: "images/xbox-series.jpg",
     nav: "Generazione IV", num: "04", year: "2020", label: "current gen",
     title: "Generazione", em: "IV",
-    intro: "La generazione corrente combina ssd nvme, architettura avanzata e servizi cloud in una piattaforma flessibile, articolata su due modelli complementari.",
+    intro: "Xbox Series X|S è la prima generazione Xbox a supportare quattro generazioni di retrocompatibilità. SSD NVMe custom, Xbox Velocity Architecture e Game Pass Ultimate definiscono un modello \"piattaforma come servizio\" su console, PC e cloud. Due hardware complementari per due target di prezzo e risoluzione.",
     specs: [
       { k: "anno", v: "2020 — oggi" },
-      { k: "cpu", v: "AMD Zen 2 8 core 3.8 GHz" },
-      { k: "gpu", v: "RDNA 2 fino a 12 TFLOPS" },
-      { k: "ram", v: "10 — 16 GB GDDR6" },
-      { k: "storage", v: "SSD NVMe 512 GB / 1 TB" },
-      { k: "target", v: "1440p — 4K / 120 fps" }
+      { k: "cpu (Series X)", v: "AMD Zen 2 8 core · 3,8 GHz (3,66 w/SMT) · 7 nm" },
+      { k: "gpu (Series X)", v: "RDNA 2 · 52 CU · 1,825 GHz · 12,155 TFLOPS" },
+      { k: "ram (Series X)", v: "16 GB GDDR6 · 10 GB @ 560 GB/s · 6 GB @ 336 GB/s" },
+      { k: "cpu (Series S)", v: "AMD Zen 2 8 core · 3,6 GHz (3,4 w/SMT)" },
+      { k: "gpu (Series S)", v: "RDNA 2 · 20 CU · 1,565 GHz · 4 TFLOPS" },
+      { k: "ram (Series S)", v: "10 GB GDDR6 · 8 GB @ 224 GB/s · 2 GB @ 56 GB/s" },
+      { k: "storage", v: "1 TB NVMe SSD (Series X) · 512 GB (Series S) · schede exp." },
+      { k: "target", v: "4K / 60–120 fps (X) · 1440p / 60–120 fps (S)" },
+      { k: "retrocomp.", v: "4 generazioni Xbox · Auto HDR · FPS Boost · Quick Resume" }
     ],
     timeline: [
-      { date: "06.2019", title: "Annuncio next-gen", desc: "Visione orientata a velocità di caricamento e latenza ridotta." },
-      { date: "11.2020", title: "Lancio doppio", desc: "Due modelli complementari: alta fedeltà e accesso digitale." },
-      { date: "2021", title: "Boost framerate", desc: "Miglioramenti retrocompatibili per aumentare i frame rate dei titoli legacy." },
-      { date: "2022—2026", title: "Espansione cloud", desc: "Crescita del servizio in streaming e del valore complessivo dell'abbonamento." }
+      { date: "06.2019", title: "Annuncio Project Scarlett all'E3", desc: "Microsoft svela i target: CPU 4× e GPU 2× rispetto a Xbox One X, SSD, 120 fps, 8K e retrocompatibilità totale. Halo Infinite annunciato come titolo di lancio." },
+      { date: "12.2019", title: "Reveal Xbox Series X ai TGA", desc: "Nome commerciale e design a \"tower\" svelati ai The Game Awards 2019. Il meme \"mini-frigo\" diventa virale. Slogan: power your dreams." },
+      { date: "03.2020", title: "Specifiche tecniche complete", desc: "Microsoft pubblica le spec definitive: Zen 2, RDNA 2 12 TFLOPS, 16 GB GDDR6, SSD 2,4 GB/s, Xbox Velocity Architecture con DirectStorage e BCPack." },
+      { date: "09.2020", title: "Annuncio Xbox Series S e prezzi", desc: "Series S svelata come \"la più piccola Xbox di sempre\": 299 USD, 4 TFLOPS, target 1440p, solo digitale. Series X a 499 USD. Lancio fissato al 10 novembre." },
+      { date: "10.11.2020", title: "Lancio globale simultaneo", desc: "Lancio in numerosi mercati contemporaneamente: il più ampio della storia del brand. 30 titoli ottimizzati al day one. Shortage chip limita la disponibilità." },
+      { date: "02.2021", title: "FPS Boost", desc: "Feature retrocompatibile che raddoppia o quadruplica il frame rate di titoli selezionati precedenti, senza modifiche da parte degli sviluppatori." },
+      { date: "09.2021", title: "Dolby Vision Gaming", desc: "Xbox Series X|S diventano le prime console a supportare Dolby Vision nei giochi, con mappatura dinamica della luminosità su titoli HDR10 e Auto HDR." },
+      { date: "11.2021", title: "Halo Infinite Limited Edition Bundle", desc: "Console Series X con livrea UNSC per il ventennale di Halo. Uno degli SKU più ricercati della generazione. Lancio contestuale di Halo Infinite." },
+      { date: "06.2023", title: "21 milioni di unità", desc: "Microsoft conferma pubblicamente il traguardo dei 21 milioni di unità Series X|S vendute, dichiarandosi terza dietro Nintendo e Sony." },
+      { date: "10.2024", title: "Refresh hardware 2024", desc: "Lancio di Series X 1 TB All-Digital, Series X 2 TB Galaxy Black Special Edition e Series S 1 TB. Series X 2024 adotta die più piccolo e heatpipe al posto della vapor chamber." }
     ],
     models: [
-      { name: "Modello X", desc: "Design monolitico, target 4K nativo fino a 120 fps.", tags: ["12 tflops", "1 tb ssd"] },
-      { name: "Modello S", desc: "Formato compatto, solo digitale, target 1440p fino a 120 fps.", tags: ["4 tflops", "digital"] },
-      { name: "Quick Resume", desc: "Ripresa immediata di sessioni multiple senza ricaricare.", tags: ["ux", "sistema"] },
-      { name: "Velocity Architecture", desc: "Pipeline storage ottimizzata per ridurre i colli di bottiglia.", tags: ["nvme", "io"] }
+      { name: "Series X — Carbon Black (2020)", desc: "Modello di lancio. Tower 4K, UHD Blu-ray, 1 TB SSD, vapor chamber. 499 USD. Il dispositivo Xbox più potente mai prodotto al lancio.", tags: ["2020", "4K", "12 TFLOPS"] },
+      { name: "Series S — Robot White (2020)", desc: "Entry point digitale. Chassis bianco con griglia circolare nera, 512 GB SSD, target 1440p/120 fps. 299 USD. Nessun drive ottico.", tags: ["2020", "1440p", "digital only"] },
+      { name: "Series S 1 TB Carbon Black (2023)", desc: "Stessa architettura della Series S originale con storage raddoppiato a 1 TB e colorazione nera. Prezzo 349 USD.", tags: ["2023", "1 TB", "carbon black"] },
+      { name: "Halo Infinite Limited Edition (2021)", desc: "Series X con livrea UNSC e motivi stellari per il ventennale di Halo. Controller abbinato, copia digitale del gioco. Tra le più ambite dai collezionisti.", tags: ["2021", "limited", "halo 20°"] },
+      { name: "Series X 2 TB Galaxy Black (2024)", desc: "Special Edition con SSD raddoppiato a 2 TB, die ridotto, heatpipe al posto della vapor chamber. Consumi leggermente inferiori.", tags: ["2024", "2 TB", "special edition"] },
+      { name: "Series X All-Digital (2024)", desc: "Series X senza lettore ottico. Disponibile in bianco e nero. Nuova motherboard con SoC più compatto rispetto al modello originale.", tags: ["2024", "digital only", "white/black"] }
     ],
     compare: [
       {
