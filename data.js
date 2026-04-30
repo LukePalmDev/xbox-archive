@@ -51,6 +51,48 @@ const wikiPages = {
       { name: "Halo Limited Edition", desc: "Scocca verde traslucida, Controller S abbinato, copia di Halo: Combat Evolved inclusa. Tra le più ambite dai collezionisti.", tags: ["2004", "limited", "halo"] },
       { name: "Ice Blue Halo 2 Edition", desc: "Scocca blu traslucida distribuita in Canada e alcune regioni asiatiche con Controller S verde e copia di Halo 2.", tags: ["2005", "limited", "halo 2"] },
       { name: "Mountain Dew Edition", desc: "Scocca verde lime ottenibile solo con punti fedeltà Mountain Dew USA. Tiratura stimata ~5.000 unità.", tags: ["limited", "promo", "~5.000 unità"] }
+    ],
+    editorial: [
+      {
+        title: "genesi e", em: "strategia",
+        items: [
+          { q: "origine", a: "Il progetto nasce nel 1998–99 da quattro ingegneri del team DirectX — Kevin Bachus, Seamus Blackley, Ted Hase e Otto Berkes, noti internamente come i \"Four Musketeers\" — che propongono una console basata su architettura PC per rispondere alla minaccia di PlayStation 2 come \"PC alternativo\" nel salotto. Nome in codice: Midway." },
+          { q: "obiettivi", a: "Microsoft identifica tre pilastri: hardware competitivo a base di componenti PC standard, un ambiente di sviluppo DirectX familiare agli sviluppatori PC, e un'infrastruttura online proprietaria per monetizzare i servizi oltre la sola vendita hardware e software retail." },
+          { q: "annuncio", a: "Presentata da Bill Gates e The Rock al CES di gennaio 2001, Xbox punta sulla potenza hardware e sulla familiarità di DirectX. Il nome deriva da \"DirectX Box\". La stampa accoglie con curiosità l'ingresso di un nuovo player occidentale nel mercato console." }
+        ]
+      },
+      {
+        title: "sistema operativo e", em: "servizi",
+        items: [
+          { q: "OS", a: "Il sistema operativo è un kernel Windows NT 5.0 (NT 5.0) fortemente ridotto — 512 KB di ROM — con subsistema Xbox dedicato e tutti i moduli legacy rimossi. Microsoft integra direttamente il layer DirectX per offrire API simili a quelle PC in un ambiente chiuso e controllato." },
+          { q: "dashboard", a: "La Xbox Dashboard è l'interfaccia di default: schermate con sfondo animato verde/nero, menu per giochi, musica, impostazioni e Xbox Live. Gli utenti possono copiare tracce audio da CD sull'HDD e usarle come colonne sonore personalizzate nei giochi compatibili, funzione rara per l'epoca." },
+          { q: "Xbox Live", a: "Lanciato il 15 novembre 2002 negli USA con Starter Kit a 49,95 USD (headset, demo disc, un anno di abbonamento). Introduce gamertag persistente, friend list centralizzata, matchmaking e voice chat in-game. Anticipano e influenzano fortemente i servizi di tutte le generazioni successive. Chiuso il 15 aprile 2010." }
+        ]
+      },
+      {
+        title: "libreria e", em: "franchise",
+        items: [
+          { q: "lancio", a: "Il lancio nordamericano del 15 novembre 2001 include circa 20 titoli, con Halo: Combat Evolved come killer app (Metacritic ~97). In Giappone (22 febbraio 2002) spiccano Genma Onimusha e Jet Set Radio Future; in Europa (14 marzo 2002) Dead or Alive 3 e Project Gotham Racing completano l'offerta." },
+          { q: "esclusive", a: "Halo ridefinisce gli FPS su console grazie al controllo con doppio stick analogico e al multiplayer LAN. Halo 2 (2004) diventa il driver principale di Xbox Live. Seguono Fable (Lionhead), Forza Motorsport (2005) e cult come Crimson Skies, Panzer Dragoon Orta e Jet Set Radio Future." },
+          { q: "multipiattaforma", a: "Il catalogo conta circa 800–900 titoli. La maggiore RAM e la GPU NV2A più avanzata di PS2 rendono spesso le versioni Xbox dei multipiattaforma graficamente superiori, consolidando la percezione di \"versione premium\" per molti titoli cross-platform della sesta generazione." }
+        ]
+      },
+      {
+        title: "dati commerciali e", em: "posizionamento",
+        items: [
+          { q: "vendite", a: "Le stime indicano 24–25 milioni di unità worldwide: circa 15,77M in Nord America, 7,17M in Europa, solo 0,47M in Giappone e 1,24M nel resto del mondo. Xbox supera GameCube (~21–22M) ma resta lontana da PlayStation 2 (~150M). La produzione cessa nel 2006." },
+          { q: "giappone", a: "Con appena 470.000 unità, il mercato giapponese è il grande insuccesso della prima Xbox. Le cause: design percepito come troppo occidentale, dimensioni fisiche molto criticate e line-up poco allineata ai gusti locali. Un insuccesso che fornirà importanti lezioni sulle generazioni successive." },
+          { q: "prezzo", a: "Il lancio a 299 USD (allineato a PS2) posiziona Xbox come alternativa premium con hardware superiore. I tagli progressivi — 179,99 USD nel 2004 in Nord America — e i bundle aggressivi spostano la console verso fasce più mainstream nel corso del ciclo vita." }
+        ]
+      },
+      {
+        title: "impatto e", em: "legacy",
+        items: [
+          { q: "standard online", a: "Xbox normalizza l'infrastruttura online centralizzata (gamertag, friend list, voice chat), l'HDD interno per salvataggi e contenuti, e l'architettura PC-like per semplificare lo sviluppo. Questi elementi anticipano standard che diventano universali dalla generazione successiva." },
+          { q: "FPS su console", a: "Il successo di Halo sposta il baricentro degli FPS dal PC alla console. Major League Gaming usa Halo 2 come titolo di punta nei campionati di metà anni 2000, legittimando gli esports su console. La scena LAN party di Halo costruisce un forte senso di community offline." },
+          { q: "preservazione", a: "Emulatori come Cxbx-Reloaded e xemu offrono compatibilità crescente su PC. I programmi di retrocompatibilità ufficiale su Xbox 360, One e Series X|S permettono di giocare legalmente una selezione di titoli originali su hardware moderno con miglioramenti automatici." }
+        ]
+      }
     ]
   },
   "xbox-360": {
@@ -97,6 +139,48 @@ const wikiPages = {
       { name: "Halo 3 Special Edition", desc: "Console fat verde/oro con serigrafie Spartan, HDD 20 GB, controller wireless abbinato e tema scaricabile.", tags: ["2007", "limited", "halo 3"] },
       { name: "Modern Warfare 2 Edition", desc: "Console fat grigio scuro con grafiche MW2, HDD 250 GB: prima configurazione retail con tagllio da 250 GB.", tags: ["2009", "limited", "250 gb"] },
       { name: "Kinect Star Wars Edition", desc: "Console S bianca con livrea R2-D2, controller dorato stile C-3PO, sensore Kinect bianco. Tra le più ricercate dai collezionisti.", tags: ["2012", "limited", "kinect"] }
+    ],
+    editorial: [
+      {
+        title: "red ring of", em: "death",
+        items: [
+          { q: "il problema", a: "Il \"Red Ring of Death\" (RROD) — tre quadranti rossi sul Ring of Light che indicano General Hardware Failure — è il difetto hardware più famoso della storia console. Causato da problemi termici e di saldature BGA su CPU/GPU nelle prime revisioni (Xenon, 90 nm), il tasso di guasto è stimato da alcuni report sopra il 20% nelle prime ondate." },
+          { q: "risposta", a: "Nel luglio 2007, dopo crescenti segnalazioni, Microsoft estende la garanzia a tre anni per tutti i casi di RROD con un accantonamento di 1,05 miliardi di dollari. Nel 2009 la copertura viene estesa all'errore E74 (chip ANA/HANA). Le revisioni Falcon (CPU 65 nm) e Jasper (CPU+GPU 65 nm, PSU 150 W) risolvono progressivamente il problema." },
+          { q: "risoluzione", a: "Il consolidamento definitivo arriva con Trinity (Xbox 360 S, 2010): SoC XCGPU a 45 nm integra CPU, GPU ed eDRAM su un unico chip, abbassando i consumi a 135 W ed eliminando di fatto il RROD. La revisione Jasper (2008) è considerata la più affidabile della famiglia fat." }
+        ]
+      },
+      {
+        title: "xbox live e", em: "achievements",
+        items: [
+          { q: "modello gold", a: "Con Xbox 360, Xbox Live si struttura in due tier: Silver/Free per accesso base e Gold a pagamento, necessario per il multiplayer online nella maggior parte dei titoli. Nel 2011 Microsoft dichiara oltre 30 milioni di abbonati Gold, a testimonianza della centralità del servizio nell'ecosistema." },
+          { q: "achievements", a: "Il sistema di Achievements e Gamerscore — introdotto con Xbox 360 al lancio del 2005 — diventa uno standard de facto nell'industria, replicato da Sony con i Trofei e poi da Steam. Crea engagement, replay value e un linguaggio condiviso tra giocatori su scala globale." },
+          { q: "dashboard", a: "L'interfaccia Blades al lancio viene sostituita dal New Xbox Experience (NXE) nel novembre 2008: Avatar 3D, installazione giochi su HDD, Marketplace rinnovato. La dashboard Metro arriva nel dicembre 2011 con tile, Bing search e cloud saves. Il marketplace chiude definitivamente il 29 luglio 2024, sollevando preoccupazioni sulla preservazione dei giochi digital-only." }
+        ]
+      },
+      {
+        title: "libreria e", em: "franchise",
+        items: [
+          { q: "lancio", a: "Il 22 novembre 2005 la console parte con 18 titoli in Nord America: Call of Duty 2, Condemned, Perfect Dark Zero, PGR3, Kameo, NFS: Most Wanted. Titoli diversificati per genere, con l'FPS e il racing come generi di punta della line-up iniziale." },
+          { q: "pilastri", a: "Halo 3 (2007, Metacritic ~94) conclude la trilogia originale con oltre 8 milioni di copie nel solo anno di uscita. Gears of War (2006, ~94) definisce il TPS moderno con il cover system e il roadie run. Forza Motorsport consolida la risposta a Gran Turismo. Questi tre franchise sono i pilastri identitari della console." },
+          { q: "multipiattaforma", a: "La maggiore facilità di sviluppo su 360 rispetto a PS3 (modello di programmazione più lineare) porta molte versioni multipiattaforma a essere migliori in termini di frame rate e stabilità. Microsoft sfrutta questa reputazione con accordi per DLC Call of Duty in anteprima e contenuti GTA IV esclusivi temporali." }
+        ]
+      },
+      {
+        title: "dati commerciali e", em: "posizionamento",
+        items: [
+          { q: "vendite", a: "Xbox 360 supera ampiamente il primo Xbox: circa 84–86 milioni di unità worldwide, con 42,7 milioni negli USA (dato Circana). In UK diventa la console di settima generazione più venduta. In Giappone si ferma a circa 1,6 milioni, in miglioramento rispetto al predecessore ma ancora marginale." },
+          { q: "dominio USA", a: "La console è la più venduta mensilmente negli USA per 32 mesi consecutivi tra gennaio 2011 e ottobre 2013, grazie alla revisione Slim, a Kinect e a un catalogo maturo. Globalmente Wii domina per volume ma perde supporto third-party negli ultimi anni; PS3 recupera nel medio periodo." },
+          { q: "kinect", a: "Lanciato nel novembre 2010, Kinect diventa il dispositivo consumer venduto più rapidamente nella storia al lancio: 8 milioni di unità nei primi 60 giorni. Estende il pubblico ben oltre il target core gamer e prolunga il ciclo commerciale di Xbox 360 fino al 2016, anno della fine della produzione." }
+        ]
+      },
+      {
+        title: "legacy e", em: "impatto culturale",
+        items: [
+          { q: "standard moderni", a: "Xbox 360 è spesso considerata la console che definisce il modello moderno di piattaforma online: achievements, party chat cross-game, marketplace digitale, DLC e games on demand. TechRadar la definisce la console più influente della sua generazione per l'enfasi su distribuzione digitale e multiplayer." },
+          { q: "scena competitiva", a: "La combinazione di Xbox Live, Halo 2 e poi Halo 3 fonda una delle prime scene esports strutturate su console. Major League Gaming usa Halo come titolo di punta; Gears of War è presente nel circuito competitivo con tornei dedicati nella seconda metà degli anni 2000." },
+          { q: "preservazione", a: "Il progetto Xenia punta all'emulazione completa su PC. La retrocompatibilità ufficiale su Xbox One e Series X|S permette di giocare centinaia di titoli 360 con miglioramenti automatici (Auto HDR, FPS Boost). La chiusura del marketplace nel 2024 ha spinto community e istituzioni a rafforzare i progetti di preservazione digitale." }
+        ]
+      }
     ]
   },
   "xbox-one": {
@@ -137,6 +221,48 @@ const wikiPages = {
       { name: "Xbox One S All-Digital (2019)", desc: "Nessun lettore ottico, solo digitale. 1 TB in bundle con Forza Horizon 3, Sea of Thieves e Minecraft.", tags: ["2019", "digital only", "249 USD"] },
       { name: "Xbox One X (2017)", desc: "GPU 6 TFLOPS, 12 GB GDDR5, 4K nativo, vapor chamber. La console più potente al lancio nel 2017. Case compatto.", tags: ["2017", "4K nativo", "6 TFLOPS"] },
       { name: "Cyberpunk 2077 Limited Edition", desc: "Xbox One X con pannelli metallici, incisioni laser e LED fosforescenti. Limitata a ~45.000 unità, molto ricercata dai collezionisti.", tags: ["2020", "limited", "~45.000 unità"] }
+    ],
+    editorial: [
+      {
+        title: "controversia al", em: "lancio",
+        items: [
+          { q: "reveal 2013", a: "Il reveal del 21 maggio 2013 punta marcatamente su TV, Kinect vocale e hub multimediale, relegando i giochi a una porzione limitata della presentazione. Le policy DRM annunciate — check-in online ogni 24 ore, limitazioni sull'usato — scatenano un backlash immediato e massiccio dalla community internazionale." },
+          { q: "E3 2013", a: "Sony capitalizza il malcontento con un video virale su come \"prestare un gioco usato\" su PS4, considerato un momento iconico della storia dell'industria. Il 19 giugno 2013, pochi giorni dopo l'E3, Microsoft revoca tutte le policy DRM prima del lancio della console." },
+          { q: "prezzo", a: "Il lancio a 499 USD con Kinect obbligatorio pone Xbox One circa 100 dollari sopra PS4 al day-one. Questa differenza, combinata con il backlash DRM, favorisce PS4 nelle vendite iniziali: la console Sony accumula una base installata quasi doppia rispetto a Xbox One già nel 2015." }
+        ]
+      },
+      {
+        title: "evoluzione software e", em: "game pass",
+        items: [
+          { q: "tre OS", a: "Xbox One utilizza un'architettura a tre sistemi operativi: un OS dedicato ai giochi, uno basato su Windows per app e interfaccia, e un hypervisor che gestisce la ripartizione delle risorse. La funzione Snap permette di affiancare app al gameplay ma viene rimossa nel 2016 per liberare memoria ai giochi." },
+          { q: "New Xbox One Experience", a: "Il novembre 2015 porta il passaggio a base Windows 10 e la retrocompatibilità Xbox 360 con emulatore Fission: 104 titoli compatibili al debutto. La UI diventa più rapida con il Guide laterale. Il programma retrocompatibilità cresce fino a oltre 460 titoli 360, poi aggiungendo titoli Xbox originale." },
+          { q: "Game Pass", a: "Lanciato nel giugno 2017, Xbox Game Pass trasforma il modello economico Xbox: un catalogo rotante di titoli scaricabili in abbonamento. Nel 2019 arriva Game Pass Ultimate che unisce console, PC e Xbox Live Gold. È il lascito più duraturo della generazione Xbox One sull'industria." }
+        ]
+      },
+      {
+        title: "libreria e", em: "esclusive",
+        items: [
+          { q: "first-party", a: "Il ciclo vita produce Forza Motorsport 5/6/7 e Forza Horizon 2/3/4, Halo: The Master Chief Collection e Halo 5, Gears of War 4 e Gears 5, Sunset Overdrive (Insomniac), Ori and the Blind Forest / Will of the Wisps e Sea of Thieves. Molti titoli escono anche su PC tramite Xbox Play Anywhere." },
+          { q: "vs PS4", a: "Con circa 58 milioni di unità vendute per tutta la famiglia Xbox One, contro le ~115 milioni di PS4, la generazione si chiude in netta posizione di secondo posto. Il numero totale di grandi esclusive risulta inferiore a PS4, fattore spesso citato nelle analisi comparative dell'era." },
+          { q: "One X", a: "Xbox One X (novembre 2017, 499 USD) viene accolta come \"la console più potente al mondo\" al lancio: GPU 6 TFLOPS, 12 GB GDDR5, 4K nativo, vapor chamber. Introduce il concetto di mid-generation refresh di potenza significativa, anticipando PS4 Pro e influenzando il design dei cicli hardware successivi." }
+        ]
+      },
+      {
+        title: "dati commerciali e", em: "segmentazione",
+        items: [
+          { q: "vendite", a: "La famiglia Xbox One vende circa 58 milioni di unità lifetime. Il lancio è forte (1 milione nelle prime 24 ore, 3 milioni entro fine 2013), ma PS4 supera sistematicamente Xbox One nelle vendite mensili. I mercati forti restano Nord America e UK; Giappone e Asia rimangono molto deboli." },
+          { q: "multi-SKU", a: "La gamma evolve da prodotto premium all-in-one (499 USD con Kinect) a una linea stratificata: One S mainstream (299 USD), One X high-end 4K (499 USD), One S All-Digital budget digitale (249 USD). Questa segmentazione anticipa direttamente la strategia Series S/X della generazione successiva." },
+          { q: "fine produzione", a: "Microsoft cessa la produzione di Xbox One X e One S All-Digital prima del lancio di Series X|S nel 2020, concentrando le risorse sulla nuova generazione. Il supporto software e i servizi online rimangono attivi per Xbox One anche dopo la fine della produzione." }
+        ]
+      },
+      {
+        title: "legacy e", em: "influenza",
+        items: [
+          { q: "Game Pass", a: "Il lancio di Xbox Game Pass nel 2017 segna uno dei cambiamenti strutturali più significativi dell'industria moderna: un modello di distribuzione in abbonamento che concorre con l'acquisto singolo. Diventa il pilastro commerciale attorno a cui Microsoft costruisce tutta la strategia dalla generazione Series in poi." },
+          { q: "mid-gen refresh", a: "Xbox One X introduce il concetto di \"mid-generation refresh\" di potenza significativa — da 1,31 a 6 TFLOPS — anticipando PS4 Pro e consolidando l'idea di cicli hardware più flessibili. Dimostra che Microsoft può costruire hardware premium di riferimento." },
+          { q: "retrocompatibilità", a: "Il lavoro sull'emulatore Fission — assente al lancio e aggiunto nel 2015 dopo le pressioni dei giocatori — crea il know-how che rende possibile la vasta compatibilità su quattro generazioni di Series X|S. La retrocompatibilità diventa da allora un valore identitario fondamentale del brand Xbox." }
+        ]
+      }
     ]
   },
   "xbox-series": {
@@ -175,6 +301,48 @@ const wikiPages = {
       { name: "Halo Infinite Limited Edition (2021)", desc: "Series X con livrea UNSC e motivi stellari per il ventennale di Halo. Controller abbinato, copia digitale del gioco. Tra le più ambite dai collezionisti.", tags: ["2021", "limited", "halo 20°"] },
       { name: "Series X 2 TB Galaxy Black (2024)", desc: "Special Edition con SSD raddoppiato a 2 TB, die ridotto, heatpipe al posto della vapor chamber. Consumi leggermente inferiori.", tags: ["2024", "2 TB", "special edition"] },
       { name: "Series X All-Digital (2024)", desc: "Series X senza lettore ottico. Disponibile in bianco e nero. Nuova motherboard con SoC più compatto rispetto al modello originale.", tags: ["2024", "digital only", "white/black"] }
+    ],
+    editorial: [
+      {
+        title: "velocity", em: "architecture",
+        items: [
+          { q: "SSD custom", a: "L'SSD NVMe PCIe 4.0 custom da 1 TB (Series X) raggiunge 2,4 GB/s raw e fino a 4,8 GB/s con compressione hardware (BCPack + zlib). La Xbox Velocity Architecture integra SSD, decompressione hardware, DirectStorage e Sampler Feedback Streaming per caricare solo le texture effettivamente necessarie, eliminando praticamente i loading screen tradizionali." },
+          { q: "Quick Resume", a: "Quick Resume permette di riprendere sessioni multiple di gioco contemporaneamente senza ricaricare, grazie alla capacità dell'SSD di sospendere e ripristinare stati di memoria completi in pochi secondi. Dal marzo 2022 è possibile pinnare titoli prioritari che rimangono sempre residenti." },
+          { q: "FPS Boost e Auto HDR", a: "FPS Boost può raddoppiare o quadruplicare il frame rate di titoli retrocompatibili selezionati senza intervento degli sviluppatori. Auto HDR ricostruisce tramite machine learning il mapping HDR su titoli che supportano solo SDR, migliorando automaticamente l'esperienza visiva di migliaia di giochi legacy su quattro generazioni." }
+        ]
+      },
+      {
+        title: "game pass e", em: "ecosistema cloud",
+        items: [
+          { q: "Game Pass Ultimate", a: "Xbox Game Pass Ultimate integra Game Pass console, PC Game Pass, multiplayer online e Xbox Cloud Gaming in un unico abbonamento. Consente di giocare via streaming su PC, smartphone, smart TV e browser con sincronizzazione cloud dei salvataggi, estendendo Xbox ben oltre la console fisica." },
+          { q: "day-one first party", a: "Tutti i giochi sviluppati da Xbox Game Studios escono direttamente in Game Pass al lancio. Applicato a Halo Infinite, Forza Horizon 5, Hi-Fi Rush e Starfield, questo modello cambia le aspettative dei giocatori sul costo di accesso alle esclusive e rappresenta il punto differenziante principale rispetto ai concorrenti." },
+          { q: "Smart Delivery", a: "Smart Delivery garantisce l'aggiornamento automatico e gratuito alla versione next-gen dei titoli acquistati su Xbox One. Questo meccanismo, insieme alla retrocompatibilità su quattro generazioni, definisce il concetto di \"generazione morbida\" che caratterizza Series X|S: stessa identità, libreria e accessori tra generazioni." }
+        ]
+      },
+      {
+        title: "libreria e", em: "franchise",
+        items: [
+          { q: "esclusive chiave", a: "Halo Infinite (343 Industries, 2021) introduce il multiplayer free-to-play. Forza Horizon 5 (Playground Games, 2021) è acclamato come uno dei migliori racing open world di sempre. Hi-Fi Rush (Tango Gameworks, 2023), lanciato senza preavviso direttamente in Game Pass, diventa un caso di studio per la strategia \"shadow drop\". Starfield (Bethesda, 2023) come grande esclusiva console." },
+          { q: "retrocompatibilità", a: "Series X|S supportano tutti i giochi Xbox One che non richiedono Kinect, più l'intero catalogo BC di Xbox 360 e Xbox originale già supportato su One: compatibilità su quattro generazioni. Titoli BC beneficiano di miglioramenti automatici: Auto HDR, 16× anisotropic filtering, Quick Resume, FPS Boost selettivo." },
+          { q: "acquisizioni", a: "Nel corso della generazione Series, Microsoft porta a termine l'acquisizione di Activision Blizzard King (2023, circa 68,7 miliardi di dollari), la più grande della storia dell'industria videoludica, aggiungendo all'ecosistema Xbox i franchise Call of Duty, World of Warcraft, Diablo e Overwatch." }
+        ]
+      },
+      {
+        title: "dati commerciali e", em: "posizionamento",
+        items: [
+          { q: "vendite", a: "Microsoft non pubblica cifre ufficiali, ma le stime collocano Series X|S intorno a 33–35 milioni di unità a fine 2025, contro circa 74 milioni di PS5. Il market share Xbox è stimato intorno al 16–17% worldwide. Negli USA le Series si comportano meglio; in Giappone la quota è marginale (~2,4%)." },
+          { q: "due SKU", a: "La strategia a due modelli complementari — Series X premium (499 USD, 4K, drive ottico) e Series S entry (299 USD, 1440p, digital only) — permette di coprire fascia alta e mainstream. Series S ha attirato un pubblico più ampio grazie al prezzo contenuto, ma il suo storage da 512 GB è stato oggetto di critiche ricorrenti." },
+          { q: "Xbox All-Access", a: "Il programma Xbox All-Access permette di acquisire console + Game Pass Ultimate a rate mensili (35 USD/mese per Series X, 25 USD per Series S su 24 mesi), abbassando la barriera d'accesso e integrando hardware e servizi in un unico canone. Disponibile nei principali mercati tramite retailer partner." }
+        ]
+      },
+      {
+        title: "legacy e", em: "direzione futura",
+        items: [
+          { q: "generazione morbida", a: "Series X|S codificano il modello di \"generazione morbida\": stessa UI, stesso ecosistema, quattro generazioni di giochi compatibili e aggiornamenti cross-gen automatici. Il concetto di \"Xbox\" si estende a PC e cloud più che a una singola console, ridefinendo il significato di piattaforma hardware." },
+          { q: "influenza industry", a: "Quick Resume, Auto HDR, FPS Boost e Velocity Architecture influenzano l'approccio dei concorrenti alla retrocompatibilità e alle feature software. La centralità di Game Pass e del cloud gaming spinge Sony ad accelerare PS Plus e PlayStation Now, consolidando un modello di competizione basato sui servizi." },
+          { q: "prossima generazione", a: "Phil Spencer ha dichiarato nel 2023 che il focus è sulla futura generazione piuttosto che su mid-gen refresh. L'ecosistema Xbox — con Game Pass, cloud, retrocompatibilità e acquisizioni Activision Blizzard — prepara una transizione che potrebbe de-enfatizzare ulteriormente il ruolo del singolo hardware." }
+        ]
+      }
     ],
     compare: [
       {

@@ -195,8 +195,36 @@ function renderWiki(slug) {
   const prev = wikiOrder[(idx - 1 + wikiOrder.length) % wikiOrder.length];
   const prevNav = wikiPages[prev].nav;
 
+  const editorialSection = p.editorial ? `
+    ${ruleRow("§ 03 — note editoriali", "contesto · servizi · dati · legacy")}
+    <section class="section">
+      <div class="container split">
+        <div><span class="col-label"><span class="marker"></span>editoriale</span></div>
+        <div>
+          <h2>approfondimento <em>editoriale</em>.</h2>
+          <p class="lede">contesto storico, sistema operativo, libreria, dati commerciali e influenza sull'industria.</p>
+          <div class="editorial">
+            ${p.editorial.map(ch => `
+              <div class="ed-chapter">
+                <div class="ed-chapter-title">${ch.title} <em>${ch.em}</em></div>
+                <div class="ed-entries">
+                  ${ch.items.map(it => `
+                    <div class="ed-entry">
+                      <span class="ed-q">${it.q}</span>
+                      <span class="ed-a">${it.a}</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    </section>
+  ` : "";
+
   const compareSection = p.compare ? `
-    ${ruleRow("§ 03 — confronto modelli", "due target, base condivisa")}
+    ${ruleRow("§ 04 — confronto modelli", "due target, base condivisa")}
     <section class="section">
       <div class="container split">
         <div><span class="col-label"><span class="marker"></span>confronto</span></div>
@@ -239,16 +267,21 @@ function renderWiki(slug) {
           </div>
         </div>
         <aside class="spec-card">
-          <div class="spec-num">fig.01 · scheda tecnica</div>
-          ${p.image
-            ? `<img class="spec-img" src="${p.image}" alt="${p.nav} — render" loading="lazy">`
-            : `<div class="placeholder"><span class="placeholder-label">${p.nav.toLowerCase().replace(/\s/g, "-")}.render</span></div>`}
-          <div class="spec-rows">
-            ${p.specs.map(s => `
-              <div class="spec-row">
-                <span>${s.k}</span><span>${s.v}</span>
-              </div>
-            `).join("")}
+          <div class="spec-fig-box">
+            <div class="spec-num">fig.01 · scheda tecnica</div>
+            ${p.image
+              ? `<img class="spec-img" src="${p.image}" alt="${p.nav}" loading="lazy">`
+              : `<div class="placeholder"><span class="placeholder-label">${p.nav.toLowerCase().replace(/\s/g, "-")}.render</span></div>`}
+          </div>
+          <div class="spec-data-box">
+            <div class="spec-num">fig.02 · specifiche hardware</div>
+            <div class="spec-rows">
+              ${p.specs.map(s => `
+                <div class="spec-row">
+                  <span>${s.k}</span><span>${s.v}</span>
+                </div>
+              `).join("")}
+            </div>
           </div>
         </aside>
       </div>
@@ -297,6 +330,8 @@ function renderWiki(slug) {
         </div>
       </div>
     </section>
+
+    ${editorialSection}
 
     ${compareSection}
 
