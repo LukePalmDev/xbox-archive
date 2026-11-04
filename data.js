@@ -377,7 +377,7 @@ const blogPosts = [
 ];
 
 const forumChannels = [
-  { num: "01", title: "Discussioni Pubbliche", desc: "Canale consigliato per discussioni tecniche, q&a e proposte legate alla wiki e ai contenuti del progetto. zero backend, workflow git, moderazione semplice.", cta: "apri canale", href: "https://github.com/features/discussions", tags: ["zero backend", "workflow git"] },
+  { num: "01", title: "Discussioni Pubbliche", desc: "Canale consigliato per discussioni tecniche, q&a e proposte legate alla wiki e ai contenuti del progetto. zero backend, workflow git, moderazione semplice.", cta: "apri canale", href: "https://github.com/LukePalmDev/xbox-archive/issues", tags: ["zero backend", "workflow git"] },
   { num: "02", title: "Forum Esteso", desc: "Soluzione completa per community più ampia con ruoli, categorie, notifiche e strumenti avanzati di moderazione e analisi.", cta: "valuta opzione", href: "https://www.discourse.org/", tags: ["self-hosted", "moderazione"] }
 ];
 
@@ -402,5 +402,5 @@ const stackRows = [
   ["Diario", "Aggiornamenti editoriali", "markdown / json + template spa"],
   ["Forum", "Discussioni community", "discussions / soluzione esterna"],
   ["Contributi", "Workflow collaborativo", "pull request + code review"],
-  ["Hosting", "Deploy continuo", "static cdn (netlify / vercel)"]
+  ["Hosting", "Deploy continuo", "github pages"]
 ];
