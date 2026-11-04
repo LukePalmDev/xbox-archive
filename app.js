@@ -91,12 +91,12 @@ function renderHome() {
       <div class="hero-stage">
         <h1 class="hero-display">
           un archivio<br>aperto delle<br>console <em>domestiche</em>
-          <span class="small">project box è un archivio editoriale indipendente: una raccolta strutturata di schede, timeline e revisioni hardware, mantenuta in pubblico tramite workflow git aperti.</span>
-          <span class="btn-row">
-            <a class="btn primary" href="#/wiki/xbox" data-route="wiki/xbox">apri archivio <span class="arrow">→</span></a>
-            <a class="btn" href="#/contributi" data-route="contributi">contribuisci</a>
-          </span>
         </h1>
+        <p class="hero-lede">project box è un archivio editoriale indipendente: una raccolta strutturata di schede, timeline e revisioni hardware, mantenuta in pubblico tramite workflow git aperti.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="#/wiki/xbox" data-route="wiki/xbox">apri archivio <span class="arrow">→</span></a>
+          <a class="btn" href="#/contributi" data-route="contributi">contribuisci</a>
+        </div>
         <aside class="hero-side">
           <div class="placeholder"><span class="placeholder-label">cover.archive.render</span></div>
           <h4>fig.01 / index card</h4>
@@ -418,7 +418,7 @@ function renderForum() {
           <h1>discussioni<br><em>separate</em>.</h1>
           <p class="intro">le conversazioni vivono su strumenti dedicati: il sito resta leggero, mentre la community ottiene funzionalità mature di moderazione e notifiche.</p>
           <div class="btn-row">
-            <a class="btn primary" href="https://github.com/features/discussions" target="_blank" rel="noreferrer">apri canale principale <span class="arrow">→</span></a>
+            <a class="btn primary" href="${forumChannels[0].href}" target="_blank" rel="noreferrer">apri canale principale <span class="arrow">→</span></a>
             <a class="btn" href="#/contributi" data-route="contributi">processo contributi</a>
           </div>
         </div>
@@ -544,6 +544,7 @@ function renderContributi() {
         <div>
           <h2>tecnologie <em>essenziali</em>.</h2>
           <p class="lede">riepilogo operativo delle scelte tecniche per la versione mvp del progetto. priorità a strumenti standard, statici, sostenibili.</p>
+          <div class="table-scroll">
           <table class="stack-table">
             <thead>
               <tr><th>funzione</th><th>obiettivo</th><th>tecnologia</th></tr>
@@ -552,6 +553,7 @@ function renderContributi() {
               ${stackRows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </section>
@@ -586,10 +588,8 @@ function updateActiveState(route) {
     const isWikiRoot = target === "wiki" && route.startsWith("wiki/");
     const isActive = target === route || isWikiRoot;
     el.classList.toggle("active", isActive);
-    if (el.tagName === "A") {
-      if (isActive) el.setAttribute("aria-current", "page");
-      else el.removeAttribute("aria-current");
-    }
+    if (isActive) el.setAttribute("aria-current", el.tagName === "A" ? "page" : "true");
+    else el.removeAttribute("aria-current");
   });
 }
 
